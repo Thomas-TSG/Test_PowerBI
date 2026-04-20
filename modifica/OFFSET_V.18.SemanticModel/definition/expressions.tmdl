@@ -1,0 +1,76 @@
+expression Opportunity =
+		let
+		    Origine = CommonDataService.Database("lndoffsetctcmgmt.crm4.dynamics.com"),
+		    #"Filtered Rows" = Table.SelectRows(Origine, each Text.Contains([Name], "opportunity")),
+		    dbo_opportunity = #"Filtered Rows"{[Schema="dbo",Item="opportunity"]}[Data]
+		in
+		    dbo_opportunity
+	lineageTag: 4f23ee9a-f491-49bd-b146-8d75dd76a36f
+
+	annotation PBI_NavigationStepName = Navigazione
+
+	annotation PBI_ResultType = Exception
+
+expression Calendario = ```
+		let
+		    Source = (StartDate as date, EndDate as date, StarOfFiscalYear as number)=>
+		
+		let
+		    //Capture the date range from the parameters
+		    StartDate = #date(Date.Year(StartDate), Date.Month(StartDate), 
+		    Date.Day(StartDate)),
+		    EndDate = #date(Date.Year(EndDate), Date.Month(EndDate), 
+		    Date.Day(EndDate)),
+		
+		
+		    NumberOfDays = Duration.Days( EndDate - StartDate ),
+		    Dates = List.Dates(StartDate, NumberOfDays+1, #duration(1,0,0,0)),
+		    #"Converted to Table" = Table.FromList(Dates, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+		    #"Renamed Columns" = Table.RenameColumns(#"Converted to Table",{{"Column1", "FullDateAlternateKey"}}),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"FullDateAlternateKey", type date}}),
+		    #"Inserted Year" = Table.AddColumn(#"Changed Type", "Year", each Date.Year([FullDateAlternateKey]), Int64.Type),
+		    #"Inserted Month" = Table.AddColumn(#"Inserted Year", "Month", each Date.Month([FullDateAlternateKey]), Int64.Type),
+		    #"Inserted Month Name" = Table.AddColumn(#"Inserted Month", "Month Name", each Date.MonthName([FullDateAlternateKey]), type text),
+		    #"Inserted Quarter" = Table.AddColumn(#"Inserted Month Name", "Quarter", each Date.QuarterOfYear([FullDateAlternateKey]),Int64.Type),
+		    #"Inserted Week of Year" = Table.AddColumn(#"Inserted Quarter", "Week of Year", each Date.WeekOfYear([FullDateAlternateKey]), Int64.Type),
+		    #"Inserted Week of Month" = Table.AddColumn(#"Inserted Week of Year", "Week of Month", each Date.WeekOfMonth([FullDateAlternateKey]), Int64.Type),
+		    #"Inserted Day" = Table.AddColumn(#"Inserted Week of Month", "Day", each Date.Day([FullDateAlternateKey]), Int64.Type),
+		    #"Inserted Day of Week" = Table.AddColumn(#"Inserted Day", "Day of Week", each Date.DayOfWeek([FullDateAlternateKey]), Int64.Type),
+		    #"Inserted Day of Year" = Table.AddColumn(#"Inserted Day of Week", "Day of Year", each Date.DayOfYear([FullDateAlternateKey]), Int64.Type),
+		    #"Inserted Day Name" = Table.AddColumn(#"Inserted Day of Year", "Day Name", each Date.DayOfWeekName([FullDateAlternateKey]), type text),
+		    #"Added Custom" = Table.AddColumn(#"Inserted Day Name", "Fiscal Year", each if [Month]>=StarOfFiscalYear
+		then [Year]
+		else [Year]-1),
+		    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom",{{"Fiscal Year", Int64.Type}}),
+		    #"Added Custom1" = Table.AddColumn(#"Changed Type1", "Fiscal Period", each if [Month]>=StarOfFiscalYear
+		then [Month]-(StarOfFiscalYear-1)
+		else [Month]+(12-StarOfFiscalYear+1)),
+		    #"Changed Type2" = Table.TransformColumnTypes(#"Added Custom1",{{"Fiscal Period", Int64.Type}}),
+		    #"Inserted Division" = Table.AddColumn(#"Changed Type2", "Inserted Division", each [Fiscal Period] / 3, type number),
+		    #"Rounded Up" = Table.TransformColumns(#"Inserted Division",{{"Inserted Division", Number.RoundUp, Int64.Type}}),
+		    #"Renamed Columns1" = Table.RenameColumns(#"Rounded Up",{{"Inserted Division", "Fiscal Quarter"}})
+		in
+		    #"Renamed Columns1"
+		in
+		    Source
+		```
+	lineageTag: 1eb94391-e10d-4bad-870a-4713b080327d
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Function
+
+expression DataVerseProd = "lndquality.crm4.dynamics.com" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: d72e6bce-ed63-4112-b8ba-0f5e4aa2889e
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+expression DataVerseQuality = "lndoffsetctcmgmt.crm4.dynamics.com" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 52a5a4d7-f7a1-4a3e-911d-d0283aea1972
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+

@@ -1,0 +1,515 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "0e62adda04bb030c37e5",
+  "position": {
+    "x": 37.5,
+    "y": 25,
+    "z": 0,
+    "height": 176.25,
+    "width": 1202.5,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "lnd_offsetprogram"
+                    }
+                  },
+                  "Property": "Program Name"
+                }
+              },
+              "queryRef": "lnd_offsetprogram.Program Name",
+              "nativeQueryRef": "Program Name",
+              "active": true
+            }
+          ],
+          "showAll": true
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Misure"
+                    }
+                  },
+                  "Property": "Prime Contract Value"
+                }
+              },
+              "queryRef": "_Misure.Prime Contract Value",
+              "nativeQueryRef": "Prime Contract Value"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Misure"
+                    }
+                  },
+                  "Property": "Offset Contract Value"
+                }
+              },
+              "queryRef": "_Misure.Offset Contract Value (M€)",
+              "nativeQueryRef": "Offset Contract Value"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Misure"
+                    }
+                  },
+                  "Property": "Fulfilled Obligation (CORRETTA su Program)"
+                }
+              },
+              "queryRef": "_Misure.Fulfilled Obligation (Su ContractValue, M€)",
+              "nativeQueryRef": "Fulfilled Obligation (CORRETTA su Program)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Misure"
+                    }
+                  },
+                  "Property": "Outstanding Obligation"
+                }
+              },
+              "queryRef": "_Misure.Outstanding Obligation (M€)",
+              "nativeQueryRef": "Outstanding Obligation"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Misure"
+                    }
+                  },
+                  "Property": "Uncommitted Obligation"
+                }
+              },
+              "queryRef": "_Misure.Uncommitted Obligation (M€)",
+              "nativeQueryRef": "Uncommitted Obligation"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Misure"
+                    }
+                  },
+                  "Property": "Contractual Commitment 2025 (QUEST'ANNO)"
+                }
+              },
+              "queryRef": "_Misure.Contractual Commitment 2025 (M€)",
+              "nativeQueryRef": "Contractual Commitment 2025 (QUEST'ANNO)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Misure"
+                    }
+                  },
+                  "Property": "Authorized Budget"
+                }
+              },
+              "queryRef": "_Misure.Authorized Budget",
+              "nativeQueryRef": "Authorized Budget"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Misure"
+                    }
+                  },
+                  "Property": "Available Budget"
+                }
+              },
+              "queryRef": "_Misure.Available Budget",
+              "nativeQueryRef": "Available Budget"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Misure"
+                    }
+                  },
+                  "Property": "Authorized Budget (QUEST'ANNO)"
+                }
+              },
+              "queryRef": "_Misure.Authorized Budget (QUEST'ANNO)",
+              "nativeQueryRef": "Authorized Budget (QUEST'ANNO)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Misure"
+                    }
+                  },
+                  "Property": "Consumption"
+                }
+              },
+              "queryRef": "_Misure.Consumption",
+              "nativeQueryRef": "Consumption"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Misure"
+                    }
+                  },
+                  "Property": "Consumption (QUEST'ANNO)"
+                }
+              },
+              "queryRef": "_Misure.Consumption (QUEST'ANNO)",
+              "nativeQueryRef": "Consumption (QUEST'ANNO)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Misure"
+                    }
+                  },
+                  "Property": "Budget V.I."
+                }
+              },
+              "queryRef": "_Misure.Budget V.I. (M€)",
+              "nativeQueryRef": "Budget V.I."
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Misure"
+                    }
+                  },
+                  "Property": "% Penalties"
+                }
+              },
+              "queryRef": "_Misure.% Penalties",
+              "nativeQueryRef": "% Penalties"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Misure"
+                    }
+                  },
+                  "Property": "Liability totale"
+                }
+              },
+              "queryRef": "_Misure.Liability totale",
+              "nativeQueryRef": "Liability totale"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Misure"
+                    }
+                  },
+                  "Property": "Liability Residual"
+                }
+              },
+              "queryRef": "_Misure.Liability Residual",
+              "nativeQueryRef": "Liability Residual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Misure"
+                    }
+                  },
+                  "Property": "Storico - Outstanding Amount AsOf"
+                }
+              },
+              "queryRef": "_Misure.Storico - Outstanding Amount AsOf",
+              "nativeQueryRef": "Storico - Outstanding Amount AsOf"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "lnd_offsetprogram"
+                  }
+                },
+                "Property": "Program Name"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "lnd_offsetprogram.Program Name"
+            ],
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "lnd_offsetprogram"
+                    }
+                  },
+                  "Property": "Program Name"
+                }
+              }
+            ],
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Meltem-3 ATR 72 ASW'"
+                  }
+                }
+              ]
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'C-27J'"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "layout": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tabular'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTotals": [
+        {
+          "properties": {
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "perRowLevel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "levelSubtotalEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "lnd_offsetprogram.Program Name"
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "162.25000237101318D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Misure.Outstanding Obligation (M€)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "137.9999979709056D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Misure.Uncommitted Obligation (M€)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "156.25D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Misure.Fulfilled Obligation (Su ContractValue, M€)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "98.5865997051954D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Misure.Budget V.I. (M€)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "104.20798149433536D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Misure.Contractual Commitment 2025 (M€)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "153.57142857142856D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Misure.Authorized Budget (QUEST'ANNO)"
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F8122B'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Milestone'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

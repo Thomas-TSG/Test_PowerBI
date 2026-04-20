@@ -1,0 +1,118 @@
+model Model
+	culture: it-IT
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: it-IT
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["lnd_offsetprogram","lnd_credits","lnd_creditorigination","lnd_creditutilization","lnd_offsetactivities","lnd_milestone","lnd_projects","lnd_projecttypes","lnd_activityannualcosts","lnd_amendments","lnd_invoices","lnd_contingencyexpenses","lnd_budgets","Opportunity","lnd_contingencybudget","Calendario","Calendar","Calendar (2)","lnd_penalties","DataVerseProd","DataVerseQuality","lnd_offsetprogram (2)","lnd_offsetprogram (3)"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table lnd_offsetprogram
+ref table DateTableTemplate_95d58a5b-66de-4853-98f7-edfd5bae7d93
+ref table LocalDateTable_53ff1c18-7a4d-4cc0-a711-8cffc0e601bd
+ref table LocalDateTable_8a6ba1c7-16c5-4f3b-bd53-ccbee9470c81
+ref table LocalDateTable_80e0a2b9-02f4-4d68-a0a7-0f242a628280
+ref table LocalDateTable_34ab7a6b-86fb-473e-b1cb-b0d214da5b2a
+ref table lnd_credits
+ref table LocalDateTable_f0a3abb5-10f7-4127-951d-0d97930b03b8
+ref table lnd_creditorigination
+ref table LocalDateTable_f1cf4ead-f3a8-43b6-8c61-134c6c567e11
+ref table LocalDateTable_cc6a7c13-8205-4879-9aaa-11708113b979
+ref table LocalDateTable_62bce722-da45-46e9-bf76-c54fa153fc8e
+ref table lnd_creditutilization
+ref table LocalDateTable_ab687a17-e17f-4f03-a914-7e3ea7e9e13f
+ref table LocalDateTable_158c87e0-d882-4fcc-b8e7-be67da1f9fdc
+ref table LocalDateTable_989a430a-32ef-483b-9bad-7c5440a65310
+ref table lnd_offsetactivities
+ref table LocalDateTable_ec72ff47-497b-4cf1-a1ef-ac12daec3f4a
+ref table lnd_milestone
+ref table LocalDateTable_346cce12-d9a1-4bf6-9383-02bc3d94ed07
+ref table LocalDateTable_6ad22b45-bd4d-4994-b9a2-c19a1ee42070
+ref table LocalDateTable_981afdb0-85b6-47b1-b199-6d14c8506d39
+ref table LocalDateTable_aa17e49e-cd17-45e2-a939-9479d32be269
+ref table LocalDateTable_c62d750c-7170-4d5a-b463-0b75b134d776
+ref table lnd_projects
+ref table LocalDateTable_02d4ba4c-060e-4895-9de8-9e16b8fd5126
+ref table LocalDateTable_a0958bca-3b62-47df-a41f-4330a629bae8
+ref table LocalDateTable_db6212e2-4a2a-41d3-8fe5-3f5705c1120f
+ref table LocalDateTable_ce707dd0-92c1-494d-a4a8-93ee242218e7
+ref table LocalDateTable_96c95c66-5c17-4c16-b7e3-c7ad368048d0
+ref table lnd_projecttypes
+ref table LocalDateTable_af8279b1-4451-41b2-abcc-d275a4bec9e8
+ref table lnd_activityannualcosts
+ref table LocalDateTable_84bc4e9b-30fd-494f-931e-16d34d643d93
+ref table LocalDateTable_007672c4-04b8-417f-9c05-78a8216d72ff
+ref table LocalDateTable_4cf059a2-a964-4d37-b29f-a9a15f500e40
+ref table lnd_amendments
+ref table LocalDateTable_d2b476a2-a0d7-4963-9e1e-8f49da232828
+ref table LocalDateTable_f3684699-84b3-49eb-b2fd-13950da80c38
+ref table LocalDateTable_638f8e32-7196-4787-8600-01e96c405b89
+ref table LocalDateTable_f373e19d-1210-4343-91b3-54f6d0d5a1be
+ref table LocalDateTable_7e01404e-aa07-48bf-a6b1-699559642132
+ref table lnd_invoices
+ref table LocalDateTable_5faf3b83-acc6-4aac-b03f-d4933c7d46bc
+ref table LocalDateTable_af8dad62-af2e-4d0c-9a84-63ffbabc5c09
+ref table LocalDateTable_4fdf8fb6-32cd-411e-8705-b7b7c384e03a
+ref table LocalDateTable_1f33d391-4f4a-4be6-a999-c291681556f1
+ref table LocalDateTable_d74d052e-1b6b-4542-8516-6b38ce306239
+ref table lnd_contingencyexpenses
+ref table LocalDateTable_4a7fb58f-5942-4888-b51b-3defb79dd04d
+ref table LocalDateTable_eafdb871-6e81-4ba3-a2bd-30eb419b96c6
+ref table LocalDateTable_823d2178-9748-4a06-b02d-22a3df1de707
+ref table LocalDateTable_17a52bc6-d9d6-493c-9c2e-fc66da0c5c12
+ref table lnd_budgets
+ref table LocalDateTable_a8aacce1-d51b-4a8f-9c14-2e3ff248f783
+ref table LocalDateTable_6777cf32-a373-4738-8d71-6019aa5103c3
+ref table LocalDateTable_351ea52a-bf45-490e-a13c-b3f3de32779e
+ref table lnd_contingencybudget
+ref table LocalDateTable_214ef10d-09ea-43b2-9698-187a08fded23
+ref table LocalDateTable_6c0becc6-cc2e-4adc-9b73-3489c1058fec
+ref table LocalDateTable_796e33d5-d336-4d62-ac5e-bb9080b96e1f
+ref table _Misure
+ref table Calendar
+ref table LocalDateTable_03507969-b2f6-440d-8e5f-6512d527b7a6
+ref table LocalDateTable_a90900e1-aa5b-4008-b0f0-6bd4e2f4c1b6
+ref table LocalDateTable_49759585-4a65-4c43-8126-097ebb39be55
+ref table LocalDateTable_941309dd-17a6-4f8c-83d2-8ec08d364301
+ref table LocalDateTable_61b9dddf-bc1f-41cd-89b5-60b47519b09c
+ref table LocalDateTable_48511c93-c7f3-4945-8dfe-22da869d8991
+ref table 'Calendar (2)'
+ref table LocalDateTable_6a90eda2-7078-4ce5-b48a-50480eb2c943
+ref table LocalDateTable_c6e984ff-a261-44af-8347-37948bcaba1f
+ref table lnd_penalties
+ref table LocalDateTable_a8d41827-0fa5-4352-9a3f-dd5f4ea3b86e
+ref table LocalDateTable_75ea40b5-a63d-4999-9308-5e40860e9bdc
+ref table LocalDateTable_39866c0f-76dd-419c-911d-f6f95bc05fd8
+ref table LocalDateTable_4ec7e127-be0e-4920-956a-1f3fa2e13f1f
+ref table LocalDateTable_ed0dad5d-35b5-4c26-8567-4338d648397a
+ref table 'lnd_offsetprogram (2)'
+ref table LocalDateTable_7103ace9-bd10-4552-8556-05dbbab4175c
+ref table LocalDateTable_c4483beb-f757-418f-b6a1-b7e52bbc7f5b
+ref table LocalDateTable_1a56bb58-e5b0-40ad-b561-492b9660d2b0
+ref table LocalDateTable_7eaff87e-8282-41f1-8aea-a11ba31a765b
+ref table LocalDateTable_6724e5c9-a940-452a-b160-2d4b7d6cd0a2
+ref table LocalDateTable_e72665b6-263d-4391-b55c-56331d6a9031
+ref table LocalDateTable_d139899e-d0b6-49b7-b41f-e3ea0a075e68
+ref table LocalDateTable_c2d6f7e8-2b88-4bef-ad71-97ca7cccf2ff
+ref table LocalDateTable_cabf1eda-a9c2-4172-b7bb-2a14ec00d222
+ref table LocalDateTable_78b4554a-4b0d-410b-bb23-7da32c311307
+ref table LocalDateTable_6f3fa4a2-e6e5-48be-82b5-498b99118531
+ref table 'lnd_offsetprogram (3)'
+ref table LocalDateTable_f355ebdb-01c6-4743-8a13-2df3f035d90b
+ref table LocalDateTable_710b9539-af1e-416b-a31e-6662b577d3c6
+ref table LocalDateTable_b5f47b77-3c11-4c0e-85e4-ee32ac97d131
+ref table LocalDateTable_0cfb70a6-603b-42ed-a4ec-305ba4139957
+ref table LocalDateTable_251a6b69-631e-42b4-838e-0735edd27d1e
+ref table LocalDateTable_0caa58ad-13a1-4004-9c80-94e9f97a4313
+ref table LocalDateTable_cee0fc80-b60d-4d55-a36c-6c4eac143f62
+ref table LocalDateTable_00cbcd28-61e0-434a-84ec-03dd04a1e3fd
+ref table LocalDateTable_fab3067c-da0a-4d79-8026-f72b34612282
+ref table LocalDateTable_21019c3d-3b2a-4505-b56f-9c098ce34032
+
+ref cultureInfo it-IT
+

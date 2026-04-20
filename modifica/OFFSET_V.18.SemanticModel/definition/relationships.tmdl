@@ -1,0 +1,436 @@
+relationship e8483bfb-030e-4722-9a10-829d1aa351be
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_offsetprogram.'Signature Date'
+	toColumn: LocalDateTable_53ff1c18-7a4d-4cc0-a711-8cffc0e601bd.Date
+
+relationship 30c0ddce-bedd-47bf-9895-730d08ef0f07
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_offsetprogram.'End Date'
+	toColumn: LocalDateTable_8a6ba1c7-16c5-4f3b-bd53-ccbee9470c81.Date
+
+relationship cc3ecd75-d447-4c6c-8ea7-c4c1e43ad09f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_offsetprogram.'Amended End Date'
+	toColumn: LocalDateTable_80e0a2b9-02f4-4d68-a0a7-0f242a628280.Date
+
+relationship 9893d435-6284-4a7b-bb12-0637aaccc329
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_offsetprogram.'Proposal Expiration Date'
+	toColumn: LocalDateTable_34ab7a6b-86fb-473e-b1cb-b0d214da5b2a.Date
+
+relationship 120a97f2-c36a-49a1-af08-b955d17412e8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_credits.'Data creazione record'
+	toColumn: LocalDateTable_f0a3abb5-10f7-4127-951d-0d97930b03b8.Date
+
+relationship 4eef664a-54bf-4833-9202-7bc2629877b9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_creditorigination.'Data creazione'
+	toColumn: LocalDateTable_f1cf4ead-f3a8-43b6-8c61-134c6c567e11.Date
+
+relationship 86ef6b94-622e-447e-86f2-4a375fbba0ab
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_creditorigination.'Data modifica'
+	toColumn: LocalDateTable_cc6a7c13-8205-4879-9aaa-11708113b979.Date
+
+relationship 53357cc4-069b-4129-910e-a8fa86336b4b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_creditorigination.'Data creazione record'
+	toColumn: LocalDateTable_62bce722-da45-46e9-bf76-c54fa153fc8e.Date
+
+relationship c57ac091-a55a-4bde-8b7e-e5b1ed256289
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_creditutilization.'Data creazione'
+	toColumn: LocalDateTable_ab687a17-e17f-4f03-a914-7e3ea7e9e13f.Date
+
+relationship f3da1b5e-736f-4390-b745-7435cb4b7c07
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_creditutilization.'Data modifica'
+	toColumn: LocalDateTable_158c87e0-d882-4fcc-b8e7-be67da1f9fdc.Date
+
+relationship 9d89e21e-8108-410b-9269-2b903ca4083a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_creditutilization.'Data creazione record'
+	toColumn: LocalDateTable_989a430a-32ef-483b-9bad-7c5440a65310.Date
+
+relationship ee24e72f-f3da-4784-9f0d-82ccbbb63e78
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_offsetactivities.'End Date'
+	toColumn: LocalDateTable_ec72ff47-497b-4cf1-a1ef-ac12daec3f4a.Date
+
+relationship 66f32c1a-5c5f-498a-bc17-27397c4ef4c6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_milestone.'Data creazione'
+	toColumn: LocalDateTable_346cce12-d9a1-4bf6-9383-02bc3d94ed07.Date
+
+relationship 832e5a79-2564-43bb-b6b2-26b986c9b1c1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_milestone.'Data modifica'
+	toColumn: LocalDateTable_6ad22b45-bd4d-4994-b9a2-c19a1ee42070.Date
+
+relationship 0b2bb7de-4126-42ca-8d79-07f059110695
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_milestone.'Data creazione record'
+	toColumn: LocalDateTable_981afdb0-85b6-47b1-b199-6d14c8506d39.Date
+
+relationship d687b51a-c8ab-49ea-9dc3-df820c33a623
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_milestone.Deadline
+	toColumn: LocalDateTable_aa17e49e-cd17-45e2-a939-9479d32be269.Date
+
+relationship 277c14dc-d6b5-437b-99fc-50926d65f83d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_milestone.'Deferred Deadline'
+	toColumn: LocalDateTable_c62d750c-7170-4d5a-b463-0b75b134d776.Date
+
+relationship 4f934faf-4a12-4b10-9768-ad86ab099c04
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_projects.'Data creazione record'
+	toColumn: LocalDateTable_02d4ba4c-060e-4895-9de8-9e16b8fd5126.Date
+
+relationship 6904d592-6551-44b9-a2f3-287f849eca5c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_projects.'End Date'
+	toColumn: LocalDateTable_a0958bca-3b62-47df-a41f-4330a629bae8.Date
+
+relationship d29b49f4-ffa8-4ae0-868c-25c1d95c1388
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_projects.'Start Date'
+	toColumn: LocalDateTable_db6212e2-4a2a-41d3-8fe5-3f5705c1120f.Date
+
+relationship c09d05e0-ef44-4bb6-998f-39e0cfab1ea6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_projects.'Amended End Date'
+	toColumn: LocalDateTable_ce707dd0-92c1-494d-a4a8-93ee242218e7.Date
+
+relationship ae6d1ad6-8def-4570-b272-621ffb8ef4d8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_projects.'Date of Commitment'
+	toColumn: LocalDateTable_96c95c66-5c17-4c16-b7e3-c7ad368048d0.Date
+
+relationship 48643d9a-431e-419d-9d67-b60776931b55
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_projecttypes.'Data creazione record'
+	toColumn: LocalDateTable_af8279b1-4451-41b2-abcc-d275a4bec9e8.Date
+
+relationship 14dca525-5fa5-4f20-8252-3c8fa4801589
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_activityannualcosts.'Data creazione'
+	toColumn: LocalDateTable_84bc4e9b-30fd-494f-931e-16d34d643d93.Date
+
+relationship 68d1a721-7ee9-4cf9-baf9-c53b45ea0094
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_activityannualcosts.'Data modifica'
+	toColumn: LocalDateTable_007672c4-04b8-417f-9c05-78a8216d72ff.Date
+
+relationship 0daf998c-31c9-4ebe-b127-28914f088403
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_activityannualcosts.'Data creazione record'
+	toColumn: LocalDateTable_4cf059a2-a964-4d37-b29f-a9a15f500e40.Date
+
+relationship 071c7bcc-f172-4b62-8f6e-7e4175e3c0c8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_amendments.'Data creazione'
+	toColumn: LocalDateTable_d2b476a2-a0d7-4963-9e1e-8f49da232828.Date
+
+relationship 9f96e320-97d6-4802-b0ff-d81df3cd7e07
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_amendments.'Data modifica'
+	toColumn: LocalDateTable_f3684699-84b3-49eb-b2fd-13950da80c38.Date
+
+relationship d69107f6-f4bb-477c-a66e-64a45a024308
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_amendments.'Data creazione record'
+	toColumn: LocalDateTable_638f8e32-7196-4787-8600-01e96c405b89.Date
+
+relationship eeb8c48b-7404-46aa-81da-a70f6b72a385
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_amendments.'Date of Amendment'
+	toColumn: LocalDateTable_f373e19d-1210-4343-91b3-54f6d0d5a1be.Date
+
+relationship e3d7012a-36d5-408b-b0c9-29345d465206
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_amendments.'New Contract End Date'
+	toColumn: LocalDateTable_7e01404e-aa07-48bf-a6b1-699559642132.Date
+
+relationship 6320f559-f605-46d4-becd-36c871068427
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_invoices.'Data creazione'
+	toColumn: LocalDateTable_5faf3b83-acc6-4aac-b03f-d4933c7d46bc.Date
+
+relationship 106f1d4b-b32d-48b2-b380-ab954cd7dfa2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_invoices.'Data modifica'
+	toColumn: LocalDateTable_af8dad62-af2e-4d0c-9a84-63ffbabc5c09.Date
+
+relationship 9bb73dec-6024-46fc-a56b-36e175d6860e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_invoices.'Data creazione record'
+	toColumn: LocalDateTable_4fdf8fb6-32cd-411e-8705-b7b7c384e03a.Date
+
+relationship d73b8019-d1fd-4de1-be24-157a920768fd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_invoices.'Date of Issue'
+	toColumn: LocalDateTable_1f33d391-4f4a-4be6-a999-c291681556f1.Date
+
+relationship 7bd02cd4-aa39-445b-aaca-9d2a27ce3cf3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_invoices.'Date of Payment'
+	toColumn: LocalDateTable_d74d052e-1b6b-4542-8516-6b38ce306239.Date
+
+relationship 10911aaa-787a-4969-af05-159e29166cac
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_contingencyexpenses.'Data creazione'
+	toColumn: LocalDateTable_4a7fb58f-5942-4888-b51b-3defb79dd04d.Date
+
+relationship b4d01107-fdff-41f0-bfe5-4834bbf3d670
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_contingencyexpenses.'Data modifica'
+	toColumn: LocalDateTable_eafdb871-6e81-4ba3-a2bd-30eb419b96c6.Date
+
+relationship 914b5314-55a4-444a-a620-6106ddea9eb1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_contingencyexpenses.'Data creazione record'
+	toColumn: LocalDateTable_823d2178-9748-4a06-b02d-22a3df1de707.Date
+
+relationship 87cb1a6d-1e93-4c6e-bbf6-22065cf92454
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_contingencyexpenses.'Date of Release'
+	toColumn: LocalDateTable_17a52bc6-d9d6-493c-9c2e-fc66da0c5c12.Date
+
+relationship 1e92ba21-1df2-4899-8bff-0a774998f832
+	fromColumn: lnd_creditorigination.lnd_activityid
+	toColumn: lnd_offsetactivities.'Offset Activities'
+
+	annotation PBI_IsFromSource = FS
+
+relationship 70fc2ca1-db6a-4044-90c1-0eebff0e3d4c
+	fromColumn: lnd_creditutilization.lnd_milestoneid
+	toColumn: lnd_milestone.Milestone
+
+	annotation PBI_IsFromSource = FS
+
+relationship 632f51f4-63c1-48f8-ac2b-44384ebcd112
+	fromColumn: lnd_offsetactivities.lnd_projectid
+	toColumn: lnd_projects.Projects
+
+	annotation PBI_IsFromSource = FS
+
+relationship f313453c-1eaf-42e0-bc1b-51ae51279c91
+	fromColumn: lnd_activityannualcosts.lnd_activityid
+	toColumn: lnd_offsetactivities.'Offset Activities'
+
+	annotation PBI_IsFromSource = FS
+
+relationship d2ef4dd4-be6d-0981-4a9d-d06a13b85a8f
+	fromColumn: lnd_projects.lnd_projecttypeid
+	toColumn: lnd_projecttypes.'Project Types'
+
+relationship 904d5586-2835-4e6a-a863-499a71e1df31
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_budgets.'Data creazione'
+	toColumn: LocalDateTable_a8aacce1-d51b-4a8f-9c14-2e3ff248f783.Date
+
+relationship 71e410d8-1081-4283-9d44-2296642cffc1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_budgets.'Data modifica'
+	toColumn: LocalDateTable_6777cf32-a373-4738-8d71-6019aa5103c3.Date
+
+relationship f9d323d8-63dc-4f64-8eed-294f6806c43a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_budgets.'Data creazione record'
+	toColumn: LocalDateTable_351ea52a-bf45-490e-a13c-b3f3de32779e.Date
+
+relationship ed38fc22-98bb-47ca-b4eb-be7408f18c26
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_contingencybudget.'Data creazione'
+	toColumn: LocalDateTable_214ef10d-09ea-43b2-9698-187a08fded23.Date
+
+relationship 572594e7-4891-42ad-8f2e-dd47e0d8dca3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_contingencybudget.'Data modifica'
+	toColumn: LocalDateTable_6c0becc6-cc2e-4adc-9b73-3489c1058fec.Date
+
+relationship 22d70ccd-c3ef-4837-b723-9fa8461784cd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_contingencybudget.'Data creazione record'
+	toColumn: LocalDateTable_796e33d5-d336-4d62-ac5e-bb9080b96e1f.Date
+
+relationship 5bae8a34-ddbf-4b66-9935-24de1c5cc243
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_offsetprogram.'Data creazione'
+	toColumn: LocalDateTable_03507969-b2f6-440d-8e5f-6512d527b7a6.Date
+
+relationship c09c04cd-373d-49c7-a668-e9a438ce2a5a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_offsetprogram.'Data modifica'
+	toColumn: LocalDateTable_a90900e1-aa5b-4008-b0f0-6bd4e2f4c1b6.Date
+
+relationship 9bf7aa35-7e36-4eee-8ab6-ab3b2fc514fe
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_offsetprogram.'Assignment Date'
+	toColumn: LocalDateTable_49759585-4a65-4c43-8126-097ebb39be55.Date
+
+relationship ec6c11ee-5cf2-4f85-9809-87ef6a11d02c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_offsetprogram.'Bid Manager Notification Date'
+	toColumn: LocalDateTable_941309dd-17a6-4f8c-83d2-8ec08d364301.Date
+
+relationship f0ccf976-6714-4043-98fe-2b692cb75f99
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_activityannualcosts.'Cost Item Date'
+	toColumn: LocalDateTable_61b9dddf-bc1f-41cd-89b5-60b47519b09c.Date
+
+relationship da2491cc-b193-4a3d-acfa-f5050a5886dd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_offsetactivities.'Amended End Date'
+	toColumn: LocalDateTable_48511c93-c7f3-4945-8dfe-22da869d8991.Date
+
+relationship 4146d11f-1827-8b1d-c174-632aa87202d7
+	fromColumn: lnd_offsetprogram.'Start Date'
+	toColumn: Calendar.Date
+
+relationship 854a4177-b42f-417b-b379-0c846e3ed879
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_projects.'Date of Obligation'
+	toColumn: LocalDateTable_6a90eda2-7078-4ce5-b48a-50480eb2c943.Date
+
+relationship 58e8ac57-f1af-43de-a692-318d5a1a35c4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_offsetactivities.'Start Date'
+	toColumn: LocalDateTable_c6e984ff-a261-44af-8347-37948bcaba1f.Date
+
+relationship b9f56480-63b4-4add-a45c-2e0b8667af44
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_penalties.createdon
+	toColumn: LocalDateTable_a8d41827-0fa5-4352-9a3f-dd5f4ea3b86e.Date
+
+relationship 49c9b387-ab1f-4d2c-83e0-8f61ae8053ab
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_penalties.modifiedon
+	toColumn: LocalDateTable_75ea40b5-a63d-4999-9308-5e40860e9bdc.Date
+
+relationship c610f100-21d3-47ab-a06d-87290d9624da
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_penalties.overriddencreatedon
+	toColumn: LocalDateTable_39866c0f-76dd-419c-911d-f6f95bc05fd8.Date
+
+relationship e5819780-decd-4126-ae18-d7a7e4f08b45
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_penalties.lnd_paymentdate
+	toColumn: LocalDateTable_4ec7e127-be0e-4920-956a-1f3fa2e13f1f.Date
+
+relationship d2bf3169-b3e2-22ab-1548-e96e5b1061bf
+	fromColumn: lnd_penalties.lnd_milestoneid
+	toColumn: lnd_milestone.Milestone
+
+relationship 883cec65-ebc0-487b-aa71-556c4347dff0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Calendar (2)'.FullDateAlternateKey
+	toColumn: LocalDateTable_ed0dad5d-35b5-4c26-8567-4338d648397a.Date
+
+relationship db61d01d-051b-4c46-8364-d0f8bdd773d2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (2)'.createdon
+	toColumn: LocalDateTable_7103ace9-bd10-4552-8556-05dbbab4175c.Date
+
+relationship 546262d2-8eba-4bdd-9879-a5358edc65c2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (2)'.modifiedon
+	toColumn: LocalDateTable_c4483beb-f757-418f-b6a1-b7e52bbc7f5b.Date
+
+relationship ff594578-84b4-44d9-a304-5ef97e7a794a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (2)'.overriddencreatedon
+	toColumn: LocalDateTable_1a56bb58-e5b0-40ad-b561-492b9660d2b0.Date
+
+relationship e6fb8f36-271f-4d55-a84e-2f936ffc2a92
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (2)'.lnd_amendedenddate
+	toColumn: LocalDateTable_7eaff87e-8282-41f1-8aea-a11ba31a765b.Date
+
+relationship d5f62afa-8455-426d-9c35-c7cc23c4811a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (2)'.lnd_assignmentdate
+	toColumn: LocalDateTable_6724e5c9-a940-452a-b160-2d4b7d6cd0a2.Date
+
+relationship 96556b98-5a62-4636-84bc-7aca2eb7654e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (2)'.lnd_bidmanagernotificationdate
+	toColumn: LocalDateTable_e72665b6-263d-4391-b55c-56331d6a9031.Date
+
+relationship df0111e3-9d22-4dc0-9e7c-acc7adf93124
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (2)'.lnd_enddate
+	toColumn: LocalDateTable_d139899e-d0b6-49b7-b41f-e3ea0a075e68.Date
+
+relationship 46e25a8c-8fe8-4911-99f4-ab8db393d581
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (2)'.lnd_offsetmanagersentdate
+	toColumn: LocalDateTable_c2d6f7e8-2b88-4bef-ad71-97ca7cccf2ff.Date
+
+relationship c3943d90-ee4c-40ea-a628-f8e5b0d348fb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (2)'.lnd_proposalexpirationdate
+	toColumn: LocalDateTable_cabf1eda-a9c2-4172-b7bb-2a14ec00d222.Date
+
+relationship f8722a38-9385-4dac-8069-30abccace29f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (2)'.lnd_signaturedate
+	toColumn: LocalDateTable_78b4554a-4b0d-410b-bb23-7da32c311307.Date
+
+relationship 0a0c867e-737f-4667-a9b3-3596b713b4b4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (2)'.lnd_startdate
+	toColumn: LocalDateTable_6f3fa4a2-e6e5-48be-82b5-498b99118531.Date
+
+relationship 454073e8-6fcf-485e-ac87-64cbc873ec80
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (3)'.lnd_amendedenddate
+	toColumn: LocalDateTable_f355ebdb-01c6-4743-8a13-2df3f035d90b.Date
+
+relationship 969b9f72-7021-4264-b869-e026c8afcde7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (3)'.lnd_assignmentdate
+	toColumn: LocalDateTable_710b9539-af1e-416b-a31e-6662b577d3c6.Date
+
+relationship e414adc8-7836-46e2-a99e-0cd3aabc4afb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (3)'.lnd_bidmanagernotificationdate
+	toColumn: LocalDateTable_b5f47b77-3c11-4c0e-85e4-ee32ac97d131.Date
+
+relationship 2378c220-5ece-431b-a16c-d5a70a782174
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (3)'.createdon
+	toColumn: LocalDateTable_0cfb70a6-603b-42ed-a4ec-305ba4139957.Date
+
+relationship a3d9c4c3-2c8f-4a83-8774-72cef69c409a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (3)'.modifiedon
+	toColumn: LocalDateTable_251a6b69-631e-42b4-838e-0735edd27d1e.Date
+
+relationship 16c5c606-8fc9-445d-aa81-b481a4305818
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (3)'.lnd_enddate
+	toColumn: LocalDateTable_0caa58ad-13a1-4004-9c80-94e9f97a4313.Date
+
+relationship 8a458b68-9819-4646-8567-65b32611bed5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (3)'.lnd_proposalexpirationdate
+	toColumn: LocalDateTable_cee0fc80-b60d-4d55-a36c-6c4eac143f62.Date
+
+relationship 5839d0ce-0e41-451e-bcaf-824c88c561cf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (3)'.lnd_signaturedate
+	toColumn: LocalDateTable_00cbcd28-61e0-434a-84ec-03dd04a1e3fd.Date
+
+relationship 63844ac7-ee0d-4c41-a043-52d457585c21
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'lnd_offsetprogram (3)'.lnd_startdate
+	toColumn: LocalDateTable_fab3067c-da0a-4d79-8026-f72b34612282.Date
+
+relationship 4e24c428-c3ab-4a2c-b153-666d92771cdb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: lnd_credits.createdon
+	toColumn: LocalDateTable_21019c3d-3b2a-4505-b56f-9c098ce34032.Date
+

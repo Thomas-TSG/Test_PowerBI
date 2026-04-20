@@ -1,0 +1,556 @@
+table lnd_projects
+	lineageTag: 60fc0334-582d-4e57-a33c-47e314430b1c
+
+	column Projects
+		dataType: string
+		lineageTag: 5e1c803a-0177-4c5f-b5ec-3a7aa56c03b1
+		summarizeBy: none
+		sourceColumn: lnd_projectsid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ownerid
+		dataType: string
+		lineageTag: 47da1670-8af2-4402-b8ba-c6448387b672
+		summarizeBy: none
+		sourceColumn: ownerid
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningbusinessunit
+		dataType: string
+		lineageTag: d7843e58-c1a2-4de4-88b4-90554e910268
+		summarizeBy: none
+		sourceColumn: owningbusinessunit
+
+		annotation SummarizationSetBy = Automatic
+
+	column owninguser
+		dataType: string
+		lineageTag: 01ac7151-a62c-46ae-9581-59c03017222b
+		summarizeBy: none
+		sourceColumn: owninguser
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningteam
+		dataType: string
+		lineageTag: c1877238-c97d-49ba-a29a-a22efd97d3b1
+		summarizeBy: none
+		sourceColumn: owningteam
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Business Unit proprietaria'
+		dataType: string
+		lineageTag: dd208a79-e0f5-4f91-8258-aea09779fadc
+		summarizeBy: none
+		sourceColumn: owningbusinessunitname
+
+		annotation SummarizationSetBy = Automatic
+
+	column Stato
+		dataType: int64
+		formatString: 0
+		lineageTag: 50612d6a-fe7b-4e26-a8a9-46e6b211658b
+		summarizeBy: sum
+		sourceColumn: statecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column statecodename
+		dataType: string
+		lineageTag: 3c403cf3-1b7b-4403-a072-2135e0f2c7bd
+		summarizeBy: none
+		sourceColumn: statecodename
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Motivo stato'
+		dataType: int64
+		formatString: 0
+		lineageTag: cec61534-3898-43f5-abfc-3958f23d5695
+		summarizeBy: sum
+		sourceColumn: statuscode
+
+		annotation SummarizationSetBy = Automatic
+
+	column statuscodename
+		dataType: string
+		lineageTag: 2a44d68d-ebdb-4c29-a2c0-a74138574f05
+		summarizeBy: none
+		sourceColumn: statuscodename
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero sequenza importazione'
+		dataType: int64
+		formatString: 0
+		lineageTag: bdcf69ca-b02a-4d52-9ddb-83c2794fddea
+		summarizeBy: sum
+		sourceColumn: importsequencenumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data creazione record'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b7a6f134-f064-43e1-8ce6-a5db6efd0a24
+		summarizeBy: none
+		sourceColumn: overriddencreatedon
+
+		variation Variazione
+			isDefault
+			relationship: 4f934faf-4a12-4b10-9768-ad86ab099c04
+			defaultHierarchy: LocalDateTable_02d4ba4c-060e-4895-9de8-9e16b8fd5126.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project name (abbrevieted) 2'
+		dataType: string
+		lineageTag: ba9cede0-9e8f-452c-8dd7-fcc740a2a314
+		summarizeBy: none
+		sourceColumn: lnd_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID
+		dataType: string
+		lineageTag: e3d382e2-a028-4a64-bd55-265d48e1c4d1
+		summarizeBy: none
+		sourceColumn: lnd_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project name '
+		dataType: string
+		lineageTag: 3ec2ab59-8b3e-470d-8b01-0b8ea951d95f
+		summarizeBy: none
+		sourceColumn: lnd_projectname
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date of Obligation'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b7694a37-2d49-44bd-b3ef-c7cda9aec282
+		summarizeBy: none
+		sourceColumn: lnd_obligationdate
+
+		variation Variation
+			isDefault
+			relationship: 854a4177-b42f-417b-b379-0c846e3ed879
+			defaultHierarchy: LocalDateTable_6a90eda2-7078-4ce5-b48a-50480eb2c943.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'End Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 88f2ed62-3da3-4f3c-b759-402b02a4aebd
+		summarizeBy: none
+		sourceColumn: lnd_enddate
+
+		variation Variazione
+			isDefault
+			relationship: 6904d592-6551-44b9-a2f3-287f849eca5c
+			defaultHierarchy: LocalDateTable_a0958bca-3b62-47df-a41f-4330a629bae8.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project name (abbrevieted)'
+		dataType: string
+		lineageTag: 7ef0d525-2a87-4460-a563-ff71976e110c
+		summarizeBy: none
+		sourceColumn: lnd_projectnameabbrevieted
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Start Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3c2f7e9b-f0b3-4d50-be4a-667f03eff8f4
+		summarizeBy: none
+		sourceColumn: lnd_startdate
+
+		variation Variazione
+			isDefault
+			relationship: d29b49f4-ffa8-4ae0-868c-25c1d95c1388
+			defaultHierarchy: LocalDateTable_db6212e2-4a2a-41d3-8fe5-3f5705c1120f.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Amended End Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 76222bbe-e4ec-4aee-90a6-02e1ba30904b
+		summarizeBy: none
+		sourceColumn: lnd_amendedenddate
+
+		variation Variazione
+			isDefault
+			relationship: c09d05e0-ef44-4bb6-998f-39e0cfab1ea6
+			defaultHierarchy: LocalDateTable_ce707dd0-92c1-494d-a4a8-93ee242218e7.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_necessitatedbyamendment
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f1bb466a-9d99-4ad8-aa77-78af9df55ff3
+		summarizeBy: none
+		sourceColumn: lnd_necessitatedbyamendment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Necessitated by Amendment'
+		dataType: string
+		lineageTag: 2d492b18-6c48-4216-9cea-9ef797f4896d
+		summarizeBy: none
+		sourceColumn: lnd_necessitatedbyamendmentname
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_law18590
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 6b97fb5f-28d3-4ca0-9bab-433e2ec42aa4
+		summarizeBy: none
+		sourceColumn: lnd_law18590
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Law 185/90'
+		dataType: string
+		lineageTag: 9c59ac74-f4a1-4b4a-8a36-3765b94283d9
+		summarizeBy: none
+		sourceColumn: lnd_law18590name
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_committedflag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: dc7d2f23-d224-4213-871e-b745afc03de5
+		summarizeBy: none
+		sourceColumn: lnd_committedflag
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Committed flag'
+		dataType: string
+		lineageTag: 369171eb-a85b-48cf-8e6b-191fc7a43a00
+		summarizeBy: none
+		sourceColumn: lnd_committedflagname
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Commitment Time'
+		dataType: int64
+		formatString: 0
+		lineageTag: c500d750-e033-47b4-93b7-cf8a1dde720e
+		summarizeBy: sum
+		sourceColumn: lnd_commitmenttime
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date of Commitment'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d25606f5-32d7-4907-95f1-db52ea05d412
+		summarizeBy: none
+		sourceColumn: lnd_commitmentdate
+
+		variation Variazione
+			isDefault
+			relationship: ae6d1ad6-8def-4570-b272-621ffb8ef4d8
+			defaultHierarchy: LocalDateTable_96c95c66-5c17-4c16-b7e3-c7ad368048d0.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_completionflag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3507e68a-53ec-4759-bc0d-a43e8269118d
+		summarizeBy: none
+		sourceColumn: lnd_completionflag
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Completion flag'
+		dataType: string
+		lineageTag: 65c4addc-d562-412b-8095-bbcd9cbcab6c
+		summarizeBy: none
+		sourceColumn: lnd_completionflagname
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Value'
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 41c6d48b-43b1-4b6f-bf81-4094ec2ea4e2
+		summarizeBy: sum
+		sourceColumn: lnd_projectvalue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column transactioncurrencyid
+		dataType: string
+		lineageTag: a25f0c2a-f756-4743-8f3c-b4c9cf5f0033
+		summarizeBy: none
+		sourceColumn: transactioncurrencyid
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valuta
+		dataType: string
+		lineageTag: ab92f50e-2cc1-4b40-8cad-58e59a439307
+		summarizeBy: none
+		sourceColumn: transactioncurrencyidname
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tasso di cambio'
+		dataType: double
+		lineageTag: 121e0f0c-fff5-4cba-b769-5884f28b3dc1
+		summarizeBy: sum
+		sourceColumn: exchangerate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Project Value (base)'
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: bfa13831-3c34-4085-9c8a-e3ae26fdc989
+		summarizeBy: sum
+		sourceColumn: lnd_projectvalue_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column 'Expected Life Cycle Cost'
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 8b736eed-57e8-4300-91e3-f10c774c8665
+		summarizeBy: sum
+		sourceColumn: lnd_expectedlifecyclecost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column 'Expected Life Cycle Cost (base)'
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 7003dec3-f4cd-4fe3-b98b-3047494866e9
+		summarizeBy: sum
+		sourceColumn: lnd_expectedlifecyclecost_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_projecttypeid
+		dataType: string
+		lineageTag: c94ec7e2-3e11-494b-a5c9-e08baa364990
+		summarizeBy: none
+		sourceColumn: lnd_projecttypeid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Type'
+		dataType: string
+		lineageTag: cbefc920-5e85-4ef6-83db-60a11addb4bc
+		summarizeBy: none
+		sourceColumn: lnd_projecttypeidname
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_preapprovalrequestid
+		dataType: string
+		lineageTag: ba18fbc4-70ed-41c8-adda-1521e1b97f76
+		summarizeBy: none
+		sourceColumn: lnd_preapprovalrequestid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pre - Approval Request ID'
+		dataType: string
+		lineageTag: a1b4cb60-0c69-4235-9de7-7206f81af0d6
+		summarizeBy: none
+		sourceColumn: lnd_preapprovalrequestidname
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_preapprovalreplyid
+		dataType: string
+		lineageTag: 4f16e10b-4d37-46bc-b6c6-cb347c8e7a38
+		summarizeBy: none
+		sourceColumn: lnd_preapprovalreplyid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pre - Approval Reply ID'
+		dataType: string
+		lineageTag: 58223c13-9762-4822-b62c-58811fdb5b04
+		summarizeBy: none
+		sourceColumn: lnd_preapprovalreplyidname
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_amendmentnumberid
+		dataType: string
+		lineageTag: 9adef755-a11f-4258-8f8b-63f3bf32fd63
+		summarizeBy: none
+		sourceColumn: lnd_amendmentnumberid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Amendment Number'
+		dataType: string
+		lineageTag: b2a5b0a8-d568-4ce3-bb21-9c0a6af60374
+		summarizeBy: none
+		sourceColumn: lnd_amendmentnumberidname
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: 191665b6-268f-4dd2-9675-245e4357f438
+		summarizeBy: none
+		sourceColumn: lnd_description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Annotations
+		dataType: string
+		lineageTag: 8ced4187-12cb-49e5-a347-fbaafc17a0d3
+		summarizeBy: none
+		sourceColumn: lnd_annotations
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_offsetprogramid
+		dataType: string
+		lineageTag: 3307f94d-db59-42fb-8e49-fd5ee5b7dda1
+		summarizeBy: none
+		sourceColumn: lnd_offsetprogramid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Offset Program ID'
+		dataType: string
+		lineageTag: 39e9be56-31d0-407b-9529-04a95d29e3f6
+		summarizeBy: none
+		sourceColumn: lnd_offsetprogramidname
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Expected Lifecycle Percent Cost'
+		dataType: double
+		lineageTag: 3c022557-6ebb-48db-838b-ee404eefab6b
+		summarizeBy: sum
+		sourceColumn: lnd_expectedlifecyclepercentcost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Percentage of Progress'
+		dataType: double
+		lineageTag: 781d3ec7-60db-4bba-8c4c-9f7781bdfd41
+		summarizeBy: sum
+		sourceColumn: lnd_percentageofprogress
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Credits Achieved'
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 3f60695c-63b0-47ac-a003-12200a4b164d
+		summarizeBy: sum
+		sourceColumn: lnd_creditsachieved
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column 'Credits Achieved (base)'
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 917a4f8a-b800-4df1-8a5e-62f510098d2d
+		summarizeBy: sum
+		sourceColumn: lnd_creditsachieved_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column lnd_beneficiaryid
+		dataType: string
+		lineageTag: 28cdea90-4fbd-4a78-a0c8-129d5211830a
+		summarizeBy: none
+		sourceColumn: lnd_beneficiaryid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Beneficiary ID'
+		dataType: string
+		lineageTag: b5d07613-e239-41b5-99b1-8de5a8099597
+		summarizeBy: none
+		sourceColumn: lnd_beneficiaryidname
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_donorid
+		dataType: string
+		lineageTag: 1ebb809c-3bf1-40ef-a7df-1e9ee0ba952e
+		summarizeBy: none
+		sourceColumn: lnd_donorid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Donor ID'
+		dataType: string
+		lineageTag: a17e0490-72b3-47fe-97e6-d27de38b22ac
+		summarizeBy: none
+		sourceColumn: lnd_donoridname
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quota Implementata' = SUMX(lnd_projects, lnd_projects[Project Value] * lnd_projects[Percentage of Progress])
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 2cde5e04-cbfc-4fe3-a437-93bdb848afc4
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column 'Project Type Name' = RELATED(lnd_projecttypes[Type Name])
+		lineageTag: 71a42127-c8c9-493a-a0e0-ca586acfe7a1
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition lnd_projects = m
+		mode: import
+		source =
+				let
+				    Origine = CommonDataService.Database("lndoffsetctcmgmt.crm4.dynamics.com"),
+				    dbo_lnd_projects = Origine{[Schema="dbo",Item="lnd_projects"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(dbo_lnd_projects,{"createdon", "createdby", "modifiedon", "modifiedby", "createdonbehalfby", "modifiedonbehalfby", "createdbyname", "createdbyyominame", "createdonbehalfbyname", "createdonbehalfbyyominame", "modifiedbyname", "modifiedbyyominame", "modifiedonbehalfbyname", "modifiedonbehalfbyyominame", "owneridname", "owneridyominame", "timezoneruleversionnumber", "utcconversiontimezonecode", "asyncoperation", "businessunit", "lnd_amendments", "lnd_beneficiary", "lnd_correspondencewithauthorities(lnd_preapprovalreplyid)", "lnd_correspondencewithauthorities(lnd_preapprovalrequestid)", "lnd_donor", "lnd_invoices", "lnd_projectdocumentation", "lnd_projecttypes", "processsession", "systemuser(createdby)", "systemuser(createdonbehalfby)", "systemuser(modifiedby)", "systemuser(modifiedonbehalfby)", "systemuser(owninguser)", "team", "transactioncurrency", "lnd_offsetactivities", "lnd_offsetprogram"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigazione
+
+	annotation PBI_ResultType = Table
+

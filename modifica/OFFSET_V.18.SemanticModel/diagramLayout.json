@@ -1,0 +1,336 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 6976
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1516.9154530532164,
+            "y": 9202.3831838141741
+          },
+          "nodeIndex": "lnd_activityannualcosts",
+          "nodeLineageTag": "6ddc683c-345e-4cdd-b054-a29e36f653c3",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 374.46187065125224,
+            "y": 9651.6294496953888
+          },
+          "nodeIndex": "lnd_amendments",
+          "nodeLineageTag": "c97d38f1-f523-41d5-b92f-f3384c486ce6",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 39.779728638827748,
+            "y": 9483.72781055233
+          },
+          "nodeIndex": "lnd_contingencyexpenses",
+          "nodeLineageTag": "b003452f-cee9-4cbe-be3b-3965c966e39c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1551.1398195706374,
+            "y": 9573.0754837183085
+          },
+          "nodeIndex": "lnd_creditorigination",
+          "nodeLineageTag": "c7cbfbc5-6fcf-4e75-ae6a-f55e87e79063",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1198.0153298787857,
+            "y": 9656.24894558435
+          },
+          "nodeIndex": "lnd_credits",
+          "nodeLineageTag": "5a9dbbb4-a716-452e-af17-f4fb2e05732f",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 1111.3789317644535,
+            "y": 10019.965136781164
+          },
+          "nodeIndex": "lnd_creditutilization",
+          "nodeLineageTag": "9ac307d3-289d-42c4-af63-082d3a905014",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 351.30075914715229,
+            "y": 9986.2042767005732
+          },
+          "nodeIndex": "lnd_invoices",
+          "nodeLineageTag": "e46ba34b-0204-468b-9054-ef80dd57a3ef",
+          "size": {
+            "height": 273.57219304797013,
+            "width": 233.56207741462447
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 936.89604934700242,
+            "y": 9474.13707056496
+          },
+          "nodeIndex": "lnd_milestone",
+          "nodeLineageTag": "2a4d9677-aa88-464b-9f7e-439dab405e47",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 1224.0648920316314,
+            "y": 9310.5605634268832
+          },
+          "nodeIndex": "lnd_offsetactivities",
+          "nodeLineageTag": "00c92da7-6449-495d-96a3-76107fbc2934",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 650.778764139908,
+            "y": 9342.0735347190566
+          },
+          "nodeIndex": "lnd_offsetprogram",
+          "nodeLineageTag": "2979c6ea-4a86-45a7-81c6-2042a9860cc7",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 18
+        },
+        {
+          "location": {
+            "x": 950.93667607058956,
+            "y": 9122.6242661381912
+          },
+          "nodeIndex": "lnd_projects",
+          "nodeLineageTag": "60fc0334-582d-4e57-a33c-47e314430b1c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 17
+        },
+        {
+          "location": {
+            "x": 53.034304551592896,
+            "y": 9156.54497581665
+          },
+          "nodeIndex": "lnd_projecttypes",
+          "nodeLineageTag": "5dd6991e-5808-424e-86b9-b2b20a6134ce",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 363.03013478090219,
+            "y": 9304.3733180673917
+          },
+          "nodeIndex": "lnd_budgets",
+          "nodeLineageTag": "89fbf0ca-358e-4c2d-896f-223cc78a9ad5",
+          "size": {
+            "height": 300,
+            "width": 206.22380400000009
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 42.690441032082674,
+            "y": 9808.5446918347952
+          },
+          "nodeIndex": "lnd_contingencybudget",
+          "nodeLineageTag": "02fade5a-2adc-47bc-91e7-ac98f793355a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1232.2147980286361,
+            "y": 9092.1373105824423
+          },
+          "nodeIndex": "_Misure",
+          "nodeLineageTag": "0ff25e26-329b-4c15-9818-68c1f7d28743",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 528.48104293656661,
+            "y": 8971.0638612209732
+          },
+          "nodeIndex": "Calendar",
+          "nodeLineageTag": "b30d6031-54cd-41de-83f0-171e8ac14b0e",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 15
+        },
+        {
+          "location": {
+            "x": 820.8823695296644,
+            "y": 8756.822550833378
+          },
+          "nodeIndex": "Calendar (2)",
+          "nodeLineageTag": "165cd9d4-3683-4ff0-b5dd-5ac73e565e38",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 16
+        },
+        {
+          "location": {
+            "x": 795.15195054889477,
+            "y": 9906.7248622269217
+          },
+          "nodeIndex": "lnd_penalties",
+          "nodeLineageTag": "907da27a-434a-46f9-9d46-63f70338dc57",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 1795.3600909318097,
+            "y": 4564.9441841807384
+          },
+          "nodeIndex": "lnd_offsetprogram (2)",
+          "nodeLineageTag": "5c6836dd-afa9-49bc-8056-4df31df42974",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2039.580362292982,
+            "y": 4249.1585376937919
+          },
+          "nodeIndex": "lnd_offsetprogram (3)",
+          "nodeLineageTag": "8394a354-849b-4d7f-8fc3-92763cd06bf2",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 50,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 204.33333206176758,
+            "y": 258
+          },
+          "nodeIndex": "lnd_projecttypes",
+          "nodeLineageTag": "5dd6991e-5808-424e-86b9-b2b20a6134ce",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 441.33333206176758,
+            "y": 34
+          },
+          "nodeIndex": "lnd_projects",
+          "nodeLineageTag": "60fc0334-582d-4e57-a33c-47e314430b1c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "lnd_offsetprogram",
+          "nodeLineageTag": "2979c6ea-4a86-45a7-81c6-2042a9860cc7",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Non mi torna, type dovrebbe stare tra program e project",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

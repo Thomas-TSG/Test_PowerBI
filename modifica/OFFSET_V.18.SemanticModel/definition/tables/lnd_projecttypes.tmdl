@@ -1,0 +1,252 @@
+table lnd_projecttypes
+	lineageTag: 5dd6991e-5808-424e-86b9-b2b20a6134ce
+
+	column 'Project Types'
+		dataType: string
+		lineageTag: 01adfd27-a272-4df2-8acd-ee9dfd56b3b7
+		summarizeBy: none
+		sourceColumn: lnd_projecttypesid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ownerid
+		dataType: string
+		lineageTag: 881e72f3-0cd1-4522-b9f0-dc68fe77e362
+		summarizeBy: none
+		sourceColumn: ownerid
+
+		annotation SummarizationSetBy = Automatic
+
+	column Proprietario
+		dataType: string
+		lineageTag: 33710e23-1238-4d48-b6bb-abc95d7463ca
+		summarizeBy: none
+		sourceColumn: owneridname
+
+		annotation SummarizationSetBy = Automatic
+
+	column owneridyominame
+		dataType: string
+		lineageTag: 45c48cc4-f052-4226-a175-e242e580521c
+		summarizeBy: none
+		sourceColumn: owneridyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningbusinessunit
+		dataType: string
+		lineageTag: 79e83d8e-24e0-49e9-9604-e2a3b1d02a83
+		summarizeBy: none
+		sourceColumn: owningbusinessunit
+
+		annotation SummarizationSetBy = Automatic
+
+	column owninguser
+		dataType: string
+		lineageTag: c09b62b3-0fd8-4b16-a070-aae056966675
+		summarizeBy: none
+		sourceColumn: owninguser
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningteam
+		dataType: string
+		lineageTag: 80b9e4f6-6984-4c1d-88d7-ecd428bb08e9
+		summarizeBy: none
+		sourceColumn: owningteam
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Business Unit proprietaria'
+		dataType: string
+		lineageTag: 892ff33d-e4b4-4b85-8065-4da315f3823a
+		summarizeBy: none
+		sourceColumn: owningbusinessunitname
+
+		annotation SummarizationSetBy = Automatic
+
+	column Stato
+		dataType: int64
+		formatString: 0
+		lineageTag: 7df3d671-4da5-47ff-8a1b-5f826b9b25c9
+		summarizeBy: sum
+		sourceColumn: statecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column statecodename
+		dataType: string
+		lineageTag: 690e05e0-f09a-4502-aecb-202e8b9f95c9
+		summarizeBy: none
+		sourceColumn: statecodename
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Motivo stato'
+		dataType: int64
+		formatString: 0
+		lineageTag: 31768ae2-d632-4527-9107-85b85d75c750
+		summarizeBy: sum
+		sourceColumn: statuscode
+
+		annotation SummarizationSetBy = Automatic
+
+	column statuscodename
+		dataType: string
+		lineageTag: ff366792-cfe7-4f86-8ee7-99a64514e029
+		summarizeBy: none
+		sourceColumn: statuscodename
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero sequenza importazione'
+		dataType: int64
+		formatString: 0
+		lineageTag: e0d4289c-ec5b-468a-a945-a991baf10709
+		summarizeBy: sum
+		sourceColumn: importsequencenumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data creazione record'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 394c3572-e823-4783-ac4a-8e799266e995
+		summarizeBy: none
+		sourceColumn: overriddencreatedon
+
+		variation Variazione
+			isDefault
+			relationship: 48643d9a-431e-419d-9d67-b60776931b55
+			defaultHierarchy: LocalDateTable_af8279b1-4451-41b2-abcc-d275a4bec9e8.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Type Name'
+		dataType: string
+		lineageTag: ba4fa385-07d4-49fd-b5a1-105143b4713c
+		summarizeBy: none
+		sourceColumn: lnd_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Type Name 2'
+		dataType: string
+		lineageTag: 12a82481-028a-42ea-b658-0edc5b4d5669
+		summarizeBy: none
+		sourceColumn: lnd_typename
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Overall Value'
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: b890743b-fc8f-4397-8841-11e9a939eb3e
+		summarizeBy: sum
+		sourceColumn: lnd_overallvalue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column transactioncurrencyid
+		dataType: string
+		lineageTag: 62c545d8-cc13-42c7-93cd-dec1bd7ffd46
+		summarizeBy: none
+		sourceColumn: transactioncurrencyid
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valuta
+		dataType: string
+		lineageTag: 844ae413-cf5c-4897-8f80-4dea24e1198b
+		summarizeBy: none
+		sourceColumn: transactioncurrencyidname
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tasso di cambio'
+		dataType: double
+		lineageTag: 3b5975e5-ae21-48ee-8f62-f78a74cd945d
+		summarizeBy: sum
+		sourceColumn: exchangerate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Overall Value (base)'
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 8b4bd9ea-fbbd-438d-8998-6ea2c3eeca49
+		summarizeBy: sum
+		sourceColumn: lnd_overallvalue_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column 'Overall Cost'
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 36448e1f-ba90-4dfb-95ae-dffb3da4e32a
+		summarizeBy: sum
+		sourceColumn: lnd_overallcost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column 'Overall Cost (base)'
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: fcb12258-8fc4-443b-b153-ea6488833829
+		summarizeBy: sum
+		sourceColumn: lnd_overallcost_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column 'Percent Value'
+		dataType: double
+		lineageTag: cff70c52-2ced-4c5a-9771-6dacb5f9939e
+		summarizeBy: sum
+		sourceColumn: lnd_percentvalue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Overall Percent Cost'
+		dataType: double
+		lineageTag: df0c94b1-d749-4251-8025-18325e295e99
+		summarizeBy: sum
+		sourceColumn: lnd_overallpercentcost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Description
+		dataType: string
+		lineageTag: 78496568-e51f-40e1-b2aa-5965bbcbe1d0
+		summarizeBy: none
+		sourceColumn: lnd_description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition lnd_projecttypes = m
+		mode: import
+		source =
+				let
+				    Origine = CommonDataService.Database("lndoffsetctcmgmt.crm4.dynamics.com"),
+				    dbo_lnd_projecttypes = Origine{[Schema="dbo",Item="lnd_projecttypes"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(dbo_lnd_projecttypes,{"createdon", "createdby", "modifiedon", "modifiedby", "createdonbehalfby", "modifiedonbehalfby", "createdbyname", "createdbyyominame", "createdonbehalfbyname", "createdonbehalfbyyominame", "modifiedbyname", "modifiedbyyominame", "modifiedonbehalfbyname", "modifiedonbehalfbyyominame", "timezoneruleversionnumber", "utcconversiontimezonecode", "asyncoperation", "businessunit", "processsession", "systemuser(createdby)", "systemuser(createdonbehalfby)", "systemuser(modifiedby)", "systemuser(modifiedonbehalfby)", "systemuser(owninguser)", "team", "transactioncurrency"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigazione
+
+	annotation PBI_ResultType = Table
+

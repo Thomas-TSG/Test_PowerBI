@@ -1,0 +1,168 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.2.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY25SU11",
+      "reportVersionAtImport": {
+        "visual": "2.4.0",
+        "report": "3.0.0",
+        "page": "2.3.0"
+      },
+      "type": "SharedResources"
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5adf8b5afecb8af5e564",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "lnd_offsetprogram"
+              }
+            },
+            "Property": "Program Name"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY25SU11",
+          "path": "BaseThemes/CY25SU11.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "ChatGPT_Image_23_gen_2026,_19_08697274059478788.png",
+          "path": "ChatGPT_Image_23_gen_2026,_19_08697274059478788.png",
+          "type": "Image"
+        },
+        {
+          "name": "Leonardo_due04842481496532858.jpg",
+          "path": "Leonardo_due04842481496532858.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "Sfondo_Blu6380327748620586.png",
+          "path": "Sfondo_Blu6380327748620586.png",
+          "type": "Image"
+        },
+        {
+          "name": "Sfondo_BRosso5055001911817811.png",
+          "path": "Sfondo_BRosso5055001911817811.png",
+          "type": "Image"
+        },
+        {
+          "name": "Simbolo_Filtro_Non_Visibile22612433215903893.png",
+          "path": "Simbolo_Filtro_Non_Visibile22612433215903893.png",
+          "type": "Image"
+        },
+        {
+          "name": "Simbolo_Filtro_Visibile012749601802191757.png",
+          "path": "Simbolo_Filtro_Visibile012749601802191757.png",
+          "type": "Image"
+        },
+        {
+          "name": "Simbolo_Refresh7707120158530525.png",
+          "path": "Simbolo_Refresh7707120158530525.png",
+          "type": "Image"
+        },
+        {
+          "name": "Twin_Peaks34638435263013356.jpeg",
+          "path": "Twin_Peaks34638435263013356.jpeg",
+          "type": "Image"
+        },
+        {
+          "name": "Twin_Peaks5190644624959949.jpeg",
+          "path": "Twin_Peaks5190644624959949.jpeg",
+          "type": "Image"
+        },
+        {
+          "name": "Twin_Peaks5951936201819911.jpeg",
+          "path": "Twin_Peaks5951936201819911.jpeg",
+          "type": "Image"
+        },
+        {
+          "name": "Twin_Peaks9256947378991935.jpeg",
+          "path": "Twin_Peaks9256947378991935.jpeg",
+          "type": "Image"
+        },
+        {
+          "name": "Twin_Peaks9697080368369789.jpeg",
+          "path": "Twin_Peaks9697080368369789.jpeg",
+          "type": "Image"
+        },
+        {
+          "name": "Twin_Peaks9714793148975581.jpeg",
+          "path": "Twin_Peaks9714793148975581.jpeg",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

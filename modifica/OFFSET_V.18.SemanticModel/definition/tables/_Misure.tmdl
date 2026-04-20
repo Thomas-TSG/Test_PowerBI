@@ -1,0 +1,630 @@
+table _Misure
+	lineageTag: 0ff25e26-329b-4c15-9818-68c1f7d28743
+
+	measure 'Project Value su Project' =
+			
+			SUMX(
+			    lnd_projects,
+			    DIVIDE(lnd_projects[Project Value], lnd_projects[Tasso di cambio])
+			)
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Project
+		lineageTag: 7b2c5c10-0be2-485c-8b21-fef72aac55f6
+
+	measure 'Quota Residua' =
+			
+			[Project Value su Project] - [Quota Implementata Projects]
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Project
+		lineageTag: dddb87b2-c539-4ef2-b7ab-a9ffd65a17c7
+
+	measure 'Cost V.I.' =
+			
+			SUMX(
+			    lnd_projects,
+			    DIVIDE(lnd_projects[Expected Life Cycle Cost], lnd_projects[Tasso di cambio])
+			)
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		displayFolder: Project
+		lineageTag: 391ae16f-083d-48f6-a069-b756bb9d9bfb
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	measure 'Costo Progetto (%)' = ```
+			
+			DIVIDE([Cost V.I.], [Project Value su Project], 0)
+			
+			```
+		displayFolder: Project
+		lineageTag: b63e5bec-b957-4ae1-a11d-e4c9e6ff7f6d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Expected Obligation' =
+			
+			SUMX(
+			    lnd_offsetprogram,
+			    DIVIDE(lnd_offsetprogram[Obligation Amount], lnd_offsetprogram[Exchange Rate])
+			)
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		displayFolder: Programme/Contract
+		lineageTag: 289ee12f-7b46-4b04-b706-d2c4b46d4db4
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	measure 'Expected Obligation (ANNO)' =
+			
+			VAR y = YEAR(TODAY())
+			RETURN
+			
+			    CALCULATE (
+			        [Expected Obligation],
+			        KEEPFILTERS ( YEAR ( lnd_offsetprogram[Proposal Expiration Date] ) = y )
+			    )
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Programme/Contract
+		lineageTag: 183fcc2b-67ef-442a-874b-5a507d656915
+
+	measure 'Offset Contract Value' =
+			
+			SUMX(
+			    lnd_offsetprogram,
+			    DIVIDE(lnd_offsetprogram[Offset Contract Value], lnd_offsetprogram[Exchange Rate])
+			)
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Programme/Contract
+		lineageTag: fe7fde1e-eb00-4809-ad64-0a21db9ab86d
+
+	measure 'Outstanding Obligation' = ```
+			
+			SUMX(
+			    lnd_offsetprogram,
+			    DIVIDE(lnd_offsetprogram[Outstanding Amount], lnd_offsetprogram[Exchange Rate])
+			)
+			
+			```
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Programme/Contract
+		lineageTag: 7fe037e5-f891-4020-8fc8-f0175b50e309
+
+	measure 'Uncommitted Obligation' =
+			
+			SUMX(
+			    lnd_offsetprogram,
+			    DIVIDE(lnd_offsetprogram[Uncommitted], lnd_offsetprogram[Exchange Rate])
+			)
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Programme/Contract
+		lineageTag: 59b3fdb3-c960-4e03-a160-01eee195e230
+
+	measure 'Fulfilled Obligation (SBAGLIATO su Obligation Amount di Program)' = ```
+			
+			VAR Obl =
+			    CALCULATE(SUM(lnd_offsetprogram[Obligation Amount]))
+			VAR Out =
+			    CALCULATE(SUM(lnd_offsetprogram[Outstanding Amount]))
+			var OblExch = obl*[Exchange Rate Program]
+			var OutExch = Out*[Exchange Rate Program]
+			RETURN
+			OblExch - OutExch
+			
+			```
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Budget
+		lineageTag: 867fa2a6-3cb4-4ba8-ac9c-5e1aacfa9402
+
+	measure 'Fulfilled Obligation (CORRETTA su Program)' =
+			
+			SUMX(
+			    lnd_offsetprogram,
+			    DIVIDE(
+			        lnd_offsetprogram[Offset Contract Value] - lnd_offsetprogram[Outstanding Amount],
+			        lnd_offsetprogram[Exchange Rate]
+			    )
+			)
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Programme/Contract
+		lineageTag: a7f4f601-9b80-40df-a85c-c5993d1c6e9b
+
+	measure 'Contractual Commitment 2025 (QUEST''ANNO)' = ```
+			
+			VAR Y = TODAY()
+			RETURN
+			    CALCULATE(
+			        SUM(lnd_milestone[Update Target Amount]),
+			        FILTER(
+			            lnd_milestone,
+			                COALESCE(
+			                    lnd_milestone[Deferred Deadline],
+			                    lnd_milestone[Deadline]
+			                ) = Y
+			        )
+			)
+			
+			```
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Milestone
+		lineageTag: 3ce02d06-1b66-42df-b1c8-4bb84f97adbd
+
+	measure 'Budget V.I.' =
+			
+			SUMX(
+			    lnd_offsetprogram,
+			    DIVIDE(lnd_offsetprogram[Lifecycle Budget], lnd_offsetprogram[Exchange Rate])
+			)
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Programme/Contract
+		lineageTag: 38e00126-48b7-4314-bc14-5e73eeb47345
+
+	measure 'Authorized Budget (QUEST''ANNO)' =
+			
+			VAR y = YEAR(TODAY())
+			RETURN
+			CALCULATE(
+			    [Authorized Budget],
+			    lnd_budgets[Year] = FORMAT(y, "0")
+			)
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Budget
+		lineageTag: 3172e04c-10ec-46bf-b939-ba6fc2832480
+
+	measure 'Available Budget' =
+			
+			VAR cons = [Consumption]
+			RETURN
+			IF(
+			    ISBLANK(cons),
+			    [Authorized Budget],
+			    [Authorized Budget] - cons
+			)
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Budget
+		lineageTag: fe49d74b-bd08-4296-80b6-200e77397a83
+
+	measure 'Consumption (QUEST''ANNO)' =
+			
+			VAR y = YEAR(TODAY())
+			RETURN
+			CALCULATE(
+			    [Consumption],
+			    lnd_activityannualcosts[Year] = FORMAT(y, "0")
+			)
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Activity Annual Cost
+		lineageTag: 1cf9a466-135c-4935-9ff0-3e8998cd12e2
+
+	measure 'Authorized Budget' =
+			
+			SUM(lnd_budgets[Budget Total])
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Budget
+		lineageTag: 5370798d-c079-4bca-99b7-0db640625a5a
+
+	measure Consumption =
+			
+			SUMX(
+			    lnd_activityannualcosts,
+			    DIVIDE(
+			        lnd_activityannualcosts[Amount],
+			        lnd_activityannualcosts[Tasso di cambio]
+			    )
+			)
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Activity Annual Cost
+		lineageTag: cdd4069f-e5cc-4dbc-a012-3d28af6fb391
+
+	measure '% Penalties' =
+			
+			SELECTEDVALUE(lnd_offsetprogram[Penalty Percentage %])
+		displayFolder: Programme/Contract
+		lineageTag: 08f37d40-60d7-45b7-a3ca-10824c01405a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Liability totale' =
+			
+			SUMX(
+			    lnd_offsetprogram,
+			    VAR rate   = lnd_offsetprogram[Exchange Rate]
+			    VAR offEUR = DIVIDE(lnd_offsetprogram[Offset Contract Value], rate)
+			    VAR penPct = DIVIDE(lnd_offsetprogram[Penalty Percentage %], 100)
+			    VAR penEUR = DIVIDE(lnd_offsetprogram[Offset Contract Value] * penPct, rate)
+			    RETURN offEUR + penEUR
+			)
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Programme/Contract
+		lineageTag: 84277875-f9d3-4fcd-aa04-39868435b68b
+
+	measure 'Liability Residual' = ```
+			
+			SUMX(
+			    lnd_offsetprogram,
+			    VAR penPct = DIVIDE(lnd_offsetprogram[Penalty Percentage %], 100)
+			    VAR penLC  = lnd_offsetprogram[Offset Contract Value] * penPct
+			    RETURN DIVIDE(penLC, lnd_offsetprogram[Exchange Rate])
+			)
+			
+			```
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Programme/Contract
+		lineageTag: b274fcd9-5277-480f-969b-022bf45a9b04
+
+	measure 'Prime Contract Value' =
+			
+			SUMX(
+			    lnd_offsetprogram,
+			    DIVIDE(lnd_offsetprogram[Prime Contract Value], lnd_offsetprogram[Exchange Rate])
+			)
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Programme/Contract
+		lineageTag: 4ca7ec5b-3793-42a7-9b88-49e7b87ab60c
+
+	measure 'Costo Offset vs Contratto Principale %' =
+			
+			VAR actualCostEUR =
+			    SUMX(
+			        lnd_offsetprogram,
+			        DIVIDE(lnd_offsetprogram[Actual Cost], lnd_offsetprogram[Exchange Rate])
+			    )
+			RETURN
+			DIVIDE(actualCostEUR, [Prime Contract Value], 0)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Programme/Contract
+		lineageTag: cfc8208e-07f7-4180-af81-08d546bc932c
+
+	measure 'Total Obligation Amount' =
+			
+			SUMX(
+			    lnd_offsetprogram,
+			    DIVIDE(lnd_offsetprogram[Obligation Amount], lnd_offsetprogram[Exchange Rate])
+			)
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Programme/Contract
+		lineageTag: fff31a0d-4964-4fbe-a113-fb12043e68f6
+
+	measure 'Obbligazione Soddisfatta%' =
+			
+			DIVIDE(
+			    [Fulfilled Obligation (CORRETTA su Program)],
+			    [Total Obligation Amount],
+			    0
+			) * 100
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Programme/Contract
+		lineageTag: 4cb306eb-647e-48be-85a0-e3be12e2b3cf
+
+	measure 'Penalty Residua' =
+			
+			SUMX(
+			    lnd_offsetprogram,
+			    VAR possible = lnd_offsetprogram[Possible Penalty]
+			    VAR paid     = lnd_offsetprogram[Paid Penalties]
+			    VAR diff     = possible - paid
+			    RETURN
+			        IF(
+			            ISBLANK(possible) && ISBLANK(paid),
+			            BLANK(),
+			            DIVIDE(diff, lnd_offsetprogram[Exchange Rate])
+			        )
+			)
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Programme/Contract
+		lineageTag: 0c8ccda7-18eb-4d5d-a171-45fdd3a4f6d5
+
+	measure 'Quota Implementata Projects' =
+			
+			SUMX(
+			    lnd_projects,
+			    DIVIDE(lnd_projects[Quota Implementata], lnd_projects[Tasso di cambio])
+			)
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Project
+		lineageTag: 3d913a5a-e8d4-43ec-9d75-df7d3955ba45
+
+	measure 'Quota Totale' =
+			
+			
+			VAR pr = SELECTEDVALUE ( lnd_projects[Percentage of Progress] )
+			VAR pr01 = IF ( pr > 1, pr / 100, pr )
+			RETURN
+			    CALCULATE ( DIVIDE ( [Quota Implementata Projects], pr01 ) )
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Budget
+		lineageTag: 51cde0ea-8e1e-43d0-9b3c-c2ec2f02e94f
+
+	measure 'Exchange Rate Program' =
+			
+			SELECTEDVALUE(lnd_offsetprogram[Exchange Rate])
+		displayFolder: Programme/Contract
+		lineageTag: 8d468190-55c5-4ec7-ab37-46d3657ad801
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Exchange Rate Project' = CALCULATE(SELECTEDVALUE(lnd_offsetprogram[Tasso di cambio]))
+		displayFolder: Project
+		lineageTag: e771036a-1bff-42c7-8a59-58885918c9c0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Future Milestone' =
+			
+			VAR _today = TODAY()
+			RETURN
+			CALCULATE(
+			    SUMX(
+			        lnd_milestone,
+			        DIVIDE(
+			            lnd_milestone[Target Amount],
+			            lnd_milestone[Tasso di cambio]
+			        )
+			    ),
+			    KEEPFILTERS(
+			        FILTER(
+			            lnd_milestone,
+			            COALESCE(
+			                lnd_milestone[Deferred Deadline],
+			                lnd_milestone[Deadline]
+			            ) >= _today
+			        )
+			    )
+			)
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		displayFolder: Milestone
+		lineageTag: 28d2ed78-fb91-4415-aed8-03bf8d9908e7
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	measure 'Possible Penalties' =
+			
+			VAR _today = TODAY()
+			RETURN
+			CALCULATE(
+			    SUMX(
+			        lnd_offsetprogram,
+			        DIVIDE(
+			            lnd_offsetprogram[Possible Penalty],
+			            lnd_offsetprogram[Tasso di cambio]
+			        )
+			    ),
+			    KEEPFILTERS( lnd_offsetprogram[Amended End Date] >= _today )
+			)
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		displayFolder: Programme/Contract
+		lineageTag: 479c0da7-13e4-4b02-a401-9e56c441a3fc
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	measure 'Storico - Outstanding Amount AsOf' = ```
+			
+			VAR AsOfDate = 
+				MAX ('Calendar'[Date]) 
+			
+			/* 1) COMPONENTI OBBLIGATION AMOUNT */ 
+			
+			VAR OffsetContractValue_AsOf = 
+			-- Valore fisso del contratto (non dipende dal tempo) 
+				SUM (lnd_offsetprogram[Offset Contract Value]) 
+			VAR AmendmentsAmount_AsOf = 
+				CALCULATE ( 
+				SUM (lnd_amendments[Difference Amount (base)]), 
+				FILTER ( 
+				ALL (lnd_amendments), 
+				lnd_amendments[Date of Amendment] <= AsOfDate 
+				) 
+				) 
+			VAR EscalationAmount_AsOf = 
+			-- Serve tabella Penalties con data evento e escalated amount 
+				CALCULATE ( 
+				SUM ( lnd_penalties[lnd_escalatedamount]), 
+				FILTER ( 
+				ALL (lnd_penalties), 
+				lnd_penalties[lnd_paymentdate] <= AsOfDate 
+				) 
+				) 
+			VAR ObligationAmount_AsOf = 
+				OffsetContractValue_AsOf 
+				+ AmendmentsAmount_AsOf 
+				+ EscalationAmount_AsOf
+			
+			/* 2) COMPONENTI DEDUTTIVE */ 
+			VAR PerformedAmount_AsOf = 
+				-- Performed = somma CreditAmount delle milestone 
+				-- In pratica: somma degli Amount di Credit Utilization, filtrati per data credito <= AsOfDate 
+				CALCULATE ( 
+				SUM (lnd_creditutilization[Amount]), 
+				FILTER ( 
+				ALL (lnd_credits), 
+				lnd_credits[Date of Credit] <= AsOfDate 
+				) 
+				) 
+			VAR LiquidatedAmount_AsOf = 
+				-- Serve tabella Penalties con data evento e liquidated amount 
+				CALCULATE ( 
+				SUM (lnd_penalties[lnd_liquidatedamount]), 
+				FILTER ( 
+				ALL (lnd_penalties), 
+				lnd_penalties[lnd_paymentdate] <= AsOfDate 
+				) 
+				) 
+			/* 3) OUTSTANDING */ 
+			RETURN 
+			ObligationAmount_AsOf 
+			- PerformedAmount_AsOf 
+			- LiquidatedAmount_AsOf
+			
+			```
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		displayFolder: Storico
+		lineageTag: 353245c7-c69c-4bef-ba47-ba5402239f5f
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	measure 'Difference Amendment Amount - solo BASE' =
+			
+			SUMX(
+			    lnd_amendments,
+			    DIVIDE(lnd_amendments[Difference Amount (base)], lnd_amendments[Tasso di cambio])
+			)
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		displayFolder: Amendments
+		lineageTag: 8353a4cf-1fec-4750-8834-a0a466a5c16c
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	measure 'Escalated Amount' =
+			
+			SUMX( lnd_penalties,
+			       DIVIDE( lnd_penalties[lnd_escalatedamount], lnd_penalties[exchangerate])
+			 )
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		displayFolder: Penalties
+		lineageTag: 4e3ea79e-72fc-4c4d-b032-196351a98341
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	measure 'Credit Utilization Amount' = ```
+			
+			  SUMX (lnd_creditutilization,
+			       DIVIDE( lnd_creditutilization[Amount], lnd_creditutilization[Tasso di cambio])
+			  )
+			```
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		displayFolder: Credit Utilisation
+		lineageTag: b66fc3c2-25c5-4300-ba72-e2bf8db765be
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	measure 'Liquidated Amount' =
+			
+			SUMX(lnd_penalties,
+			    DIVIDE(lnd_penalties[lnd_liquidatedamount], lnd_penalties[exchangerate])
+			)
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		displayFolder: Penalties
+		lineageTag: e285b71c-abbe-4241-b4bd-de8d32778835
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	measure 'Outstanding Amount AsOf (EUR) – Fino all’anno corrente' =
+			
+			VAR CurrYear = YEAR ( TODAY() )
+			VAR Y =
+			    SELECTEDVALUE ( 'Calendar'[Year] )
+			VAR AsOfDate =
+			    SWITCH (
+			        TRUE(),
+			        ISBLANK ( Y ), TODAY(),                  -- Totale / nessun anno in contesto
+			        Y > CurrYear, BLANK(),                   -- Anni futuri: niente valori
+			        Y = CurrYear, TODAY(),                   -- Anno corrente: oggi
+			        DATE ( Y, 12, 31 )                       -- Anni passati: fine anno
+			    )
+			RETURN
+			IF (
+			    ISBLANK ( AsOfDate ),
+			    BLANK(),
+			    SUMX (
+			        VALUES ( lnd_offsetprogram[Offset Program ID] ),
+			
+			        VAR OffsetContractValue_AsOf =
+			            CALCULATE (
+			                SUMX (
+			                    lnd_offsetprogram,
+			                    DIVIDE (
+			                        lnd_offsetprogram[Offset Contract Value],
+			                        lnd_offsetprogram[Exchange Rate]
+			                    )
+			                )
+			            )
+			
+			        VAR AmendmentsAmount_AsOf =
+			            CALCULATE (
+			                SUMX (
+			                    lnd_amendments,
+			                    DIVIDE (
+			                        lnd_amendments[Difference Amount (base)],
+			                        lnd_amendments[Tasso di cambio]
+			                    )
+			                ),
+			                FILTER (
+			                    lnd_amendments,
+			                    lnd_amendments[Date of Amendment] <= AsOfDate
+			                )
+			            )
+			
+			        VAR EscalationAmount_AsOf =
+			            CALCULATE (
+			                SUMX (
+			                    lnd_penalties,
+			                    DIVIDE (
+			                        lnd_penalties[lnd_escalatedamount],
+			                        lnd_penalties[exchangerate]
+			                    )
+			                ),
+			                FILTER (
+			                    lnd_penalties,
+			                    lnd_penalties[lnd_paymentdate] <= AsOfDate
+			                )
+			            )
+			
+			        VAR PerformedAmount_AsOf =
+			            CALCULATE (
+			                SUMX (
+			                    lnd_creditutilization,
+			                    DIVIDE (
+			                        lnd_creditutilization[Amount],
+			                        lnd_creditutilization[Tasso di cambio]
+			                    )
+			                ),
+			                FILTER (
+			                    lnd_credits,
+			                    lnd_credits[Date of Credit] <= AsOfDate
+			                )
+			            )
+			
+			        VAR LiquidatedAmount_AsOf =
+			            CALCULATE (
+			                SUMX (
+			                    lnd_penalties,
+			                    DIVIDE (
+			                        lnd_penalties[lnd_liquidatedamount],
+			                        lnd_penalties[exchangerate]
+			                    )
+			                ),
+			                FILTER (
+			                    lnd_penalties,
+			                    lnd_penalties[lnd_paymentdate] <= AsOfDate
+			                )
+			            )
+			
+			        VAR ObligationAmount_AsOf =
+			            OffsetContractValue_AsOf
+			                + AmendmentsAmount_AsOf
+			                + EscalationAmount_AsOf
+			
+			        RETURN
+			            ObligationAmount_AsOf
+			                - PerformedAmount_AsOf
+			                - LiquidatedAmount_AsOf
+			    )
+			)
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		displayFolder: Storico
+		lineageTag: 4adbac3d-6c0b-428f-8170-84e504996cce
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column Value
+		formatString: 0
+		lineageTag: 80f9d379-c0b4-4434-a7a3-e7255af3af93
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Misure = calculated
+		mode: import
+		source = {BLANK()}
+
+	annotation PBI_Id = 299128b08a92430f9d99a0cf4e810cc2
+
