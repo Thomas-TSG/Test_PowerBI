@@ -1,0 +1,165 @@
+table Calendar
+	lineageTag: b30d6031-54cd-41de-83f0-171e8ac14b0e
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: Short Date
+		lineageTag: b543fbb2-aae3-4b2e-8142-c73bca9bd32b
+		summarizeBy: none
+		sourceColumn: Date
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 7122390f-4294-4925-9ffc-2e135079d6e5
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: df55eda3-f384-46c7-9ac6-313b88be50ce
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name'
+		dataType: string
+		lineageTag: ac8fadcf-a048-4592-a076-670210d8a6b0
+		summarizeBy: none
+		sourceColumn: Month Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: cd68c8fb-fa01-4615-b9fd-e410469fa0a2
+		summarizeBy: none
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Week of Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1bede310-4e42-4ceb-97c2-aa37bd5ada41
+		summarizeBy: none
+		sourceColumn: Week of Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Week of Month'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c96762e-9dac-4a08-b0fa-2366d94fd181
+		summarizeBy: none
+		sourceColumn: Week of Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		dataType: int64
+		formatString: 0
+		lineageTag: df31b9a0-f4f2-4b03-881a-5596b0f206fb
+		summarizeBy: none
+		sourceColumn: Day
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day of Week'
+		dataType: int64
+		formatString: 0
+		lineageTag: b9b4e60b-5087-482d-9f85-a637cf783a04
+		summarizeBy: none
+		sourceColumn: Day of Week
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day of Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7707bbd3-94aa-4ac7-a105-29167c698ead
+		summarizeBy: none
+		sourceColumn: Day of Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day Name'
+		dataType: string
+		lineageTag: da36f33c-c733-431a-9eeb-18ebc7a5fd45
+		summarizeBy: none
+		sourceColumn: Day Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fiscal Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f9473cf-513b-4f98-beac-440090b64859
+		summarizeBy: none
+		sourceColumn: Fiscal Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fiscal Period'
+		dataType: int64
+		formatString: 0
+		lineageTag: c748e6a5-6d82-4a42-b697-57e9fc8f3edd
+		summarizeBy: none
+		sourceColumn: Fiscal Period
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fiscal Quarter'
+		dataType: int64
+		formatString: 0
+		lineageTag: e2bf5349-1036-4035-836c-e62923f75ba8
+		summarizeBy: none
+		sourceColumn: Fiscal Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Date Hierarchy'
+		lineageTag: 1c97f905-e608-4bd1-b18f-0d5a6cafb837
+
+		level Date
+			lineageTag: 7df53060-0e68-4e9b-a40e-65f3d2ac2507
+			column: Date
+
+		level Year
+			lineageTag: 4913a73e-1746-49dc-a96b-8b33a70d1022
+			column: Year
+
+		level Month
+			lineageTag: 5d775096-92ae-4442-a90c-98491dadd79e
+			column: Month
+
+		level Day
+			lineageTag: f6fef5bb-adf0-457a-9835-d31e44c6459d
+			column: Day
+
+	partition Calendar = m
+		mode: import
+		source =
+				let
+				    Source = Calendario(#date(2000, 1, 1), #date(2070, 12, 31), 1),
+				    #"Renamed Columns" = Table.RenameColumns(Source,{{"FullDateAlternateKey", "Date"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

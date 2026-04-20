@@ -1,0 +1,193 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "ad3dc7d7f144495fdd57",
+  "position": {
+    "x": 780.48,
+    "y": 442.08000000000004,
+    "z": 11750,
+    "height": 230.4,
+    "width": 489.6,
+    "tabOrder": 13000
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "lnd_offsetprogram"
+                            }
+                          },
+                          "Name": "Variazione",
+                          "Property": "Amended End Date"
+                        }
+                      },
+                      "Hierarchy": "Gerarchia data"
+                    }
+                  },
+                  "Level": "Anno"
+                }
+              },
+              "queryRef": "lnd_offsetprogram.Amended End Date.Variazione.Gerarchia data.Anno",
+              "nativeQueryRef": "Amended End Date Anno",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "lnd_offsetprogram"
+                            }
+                          },
+                          "Name": "Variazione",
+                          "Property": "Amended End Date"
+                        }
+                      },
+                      "Hierarchy": "Gerarchia data"
+                    }
+                  },
+                  "Level": "Trimestre"
+                }
+              },
+              "queryRef": "lnd_offsetprogram.Amended End Date.Variazione.Gerarchia data.Trimestre",
+              "nativeQueryRef": "Amended End Date Trimestre",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "lnd_offsetprogram"
+                            }
+                          },
+                          "Name": "Variazione",
+                          "Property": "Amended End Date"
+                        }
+                      },
+                      "Hierarchy": "Gerarchia data"
+                    }
+                  },
+                  "Level": "Mese"
+                }
+              },
+              "queryRef": "lnd_offsetprogram.Amended End Date.Variazione.Gerarchia data.Mese",
+              "nativeQueryRef": "Amended End Date Mese",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "lnd_offsetprogram"
+                            }
+                          },
+                          "Name": "Variazione",
+                          "Property": "Amended End Date"
+                        }
+                      },
+                      "Hierarchy": "Gerarchia data"
+                    }
+                  },
+                  "Level": "Giorno"
+                }
+              },
+              "queryRef": "lnd_offsetprogram.Amended End Date.Variazione.Gerarchia data.Giorno",
+              "nativeQueryRef": "Amended End Date Giorno",
+              "active": false
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "lnd_offsetprogram"
+                    }
+                  },
+                  "Property": "Program Name"
+                }
+              },
+              "queryRef": "lnd_offsetprogram.Program Name",
+              "nativeQueryRef": "Program Name"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Misure"
+                    }
+                  },
+                  "Property": "Possible Penalties"
+                }
+              },
+              "queryRef": "_Misure.Possible Penalties",
+              "nativeQueryRef": "Possible Penalties"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Penalties'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

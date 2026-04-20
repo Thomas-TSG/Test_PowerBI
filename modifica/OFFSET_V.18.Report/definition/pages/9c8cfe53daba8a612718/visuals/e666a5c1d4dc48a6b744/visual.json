@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "e666a5c1d4dc48a6b744",
+  "position": {
+    "x": 9.5238095238095237,
+    "y": 169.04761904761907,
+    "z": 3000,
+    "height": 351.1904761904762,
+    "width": 752.38095238095241,
+    "tabOrder": 13000
+  },
+  "visualGroup": {
+    "displayName": "GRUPPO FILTRI ADR",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "8b0037ed8c1d2b863fd1"
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "OFFSET_V.18"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0a33f7ac-e85e-4741-a1d5-c212cf8ddd80"
+  }
+}

@@ -1,0 +1,390 @@
+table lnd_budgets
+	lineageTag: 89fbf0ca-358e-4c2d-896f-223cc78a9ad5
+
+	column Budgets
+		dataType: string
+		lineageTag: 37c495a3-1926-4ec0-a44a-91bb584393b4
+		summarizeBy: none
+		sourceColumn: lnd_budgetsid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data creazione'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8d9a5657-4240-46d2-8312-3ff1b432ea9d
+		summarizeBy: none
+		sourceColumn: createdon
+
+		variation Variation
+			isDefault
+			relationship: 904d5586-2835-4e6a-a863-499a71e1df31
+			defaultHierarchy: LocalDateTable_a8aacce1-d51b-4a8f-9c14-2e3ff248f783.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdby
+		dataType: string
+		lineageTag: fadb2829-be15-451d-aa2c-13811a1625e1
+		summarizeBy: none
+		sourceColumn: createdby
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data modifica'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7750bc52-3e81-481b-8c89-9e413da624a1
+		summarizeBy: none
+		sourceColumn: modifiedon
+
+		variation Variation
+			isDefault
+			relationship: 71e410d8-1081-4283-9d44-2296642cffc1
+			defaultHierarchy: LocalDateTable_6777cf32-a373-4738-8d71-6019aa5103c3.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedby
+		dataType: string
+		lineageTag: b4866881-7c27-4de2-9b71-a14f57f2bf28
+		summarizeBy: none
+		sourceColumn: modifiedby
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonbehalfby
+		dataType: string
+		lineageTag: fc898311-9d49-49e6-b83f-a20d8d865861
+		summarizeBy: none
+		sourceColumn: createdonbehalfby
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedonbehalfby
+		dataType: string
+		lineageTag: 3501f3b3-9d89-449a-ab62-71d27b058360
+		summarizeBy: none
+		sourceColumn: modifiedonbehalfby
+
+		annotation SummarizationSetBy = Automatic
+
+	column Autore
+		dataType: string
+		lineageTag: a87c9660-1390-4401-8a1a-da1b275c756e
+		summarizeBy: none
+		sourceColumn: createdbyname
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdbyyominame
+		dataType: string
+		lineageTag: d1572ff0-00cc-4c6d-aaaf-e3aa5105e0f6
+		summarizeBy: none
+		sourceColumn: createdbyyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Autore (delegato)'
+		dataType: string
+		lineageTag: 5741862a-92aa-4acc-bb38-911c71bd5b72
+		summarizeBy: none
+		sourceColumn: createdonbehalfbyname
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonbehalfbyyominame
+		dataType: string
+		lineageTag: 68090b7a-40da-4a18-8912-67b1c2e6de5e
+		summarizeBy: none
+		sourceColumn: createdonbehalfbyyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Autore modifica'
+		dataType: string
+		lineageTag: 79c590bd-8f23-418f-b112-9a774f9dff8a
+		summarizeBy: none
+		sourceColumn: modifiedbyname
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedbyyominame
+		dataType: string
+		lineageTag: dbcde37b-366f-47e1-89e3-53a993a472e9
+		summarizeBy: none
+		sourceColumn: modifiedbyyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Autore modifica (delegato)'
+		dataType: string
+		lineageTag: 27d2f1e6-050f-4c3c-97c1-5119b65282e2
+		summarizeBy: none
+		sourceColumn: modifiedonbehalfbyname
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedonbehalfbyyominame
+		dataType: string
+		lineageTag: 82a91da3-2908-4c2a-bc73-78d7ae0e713b
+		summarizeBy: none
+		sourceColumn: modifiedonbehalfbyyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column ownerid
+		dataType: string
+		lineageTag: a3a103d3-e9e9-4d09-ba61-163c5818d1fd
+		summarizeBy: none
+		sourceColumn: ownerid
+
+		annotation SummarizationSetBy = Automatic
+
+	column Proprietario
+		dataType: string
+		lineageTag: 2e2ff6da-6710-469c-b22c-ff9421578b5b
+		summarizeBy: none
+		sourceColumn: owneridname
+
+		annotation SummarizationSetBy = Automatic
+
+	column owneridyominame
+		dataType: string
+		lineageTag: 2988c3ec-bc2f-4575-8dd5-5eb14e42364f
+		summarizeBy: none
+		sourceColumn: owneridyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningbusinessunit
+		dataType: string
+		lineageTag: 8b0f244e-033e-41f2-9214-93867870e0b1
+		summarizeBy: none
+		sourceColumn: owningbusinessunit
+
+		annotation SummarizationSetBy = Automatic
+
+	column owninguser
+		dataType: string
+		lineageTag: f6739ae7-d773-4bd5-a9db-61722c0c41db
+		summarizeBy: none
+		sourceColumn: owninguser
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningteam
+		dataType: string
+		lineageTag: c47c28a8-db61-43bc-bd27-d9459cc1db53
+		summarizeBy: none
+		sourceColumn: owningteam
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Business Unit proprietaria'
+		dataType: string
+		lineageTag: 79bf002b-9e81-4603-afcd-ac5a956489a8
+		summarizeBy: none
+		sourceColumn: owningbusinessunitname
+
+		annotation SummarizationSetBy = Automatic
+
+	column Stato
+		dataType: int64
+		formatString: 0
+		lineageTag: 4542efd1-7f49-4fe1-93bd-a89dabf4bdff
+		summarizeBy: sum
+		sourceColumn: statecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column statecodename
+		dataType: string
+		lineageTag: 03faf3b0-da5b-48d9-9894-0891077f4b67
+		summarizeBy: none
+		sourceColumn: statecodename
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Motivo stato'
+		dataType: int64
+		formatString: 0
+		lineageTag: d8e2b06c-bf2b-43c8-ac16-2c4cbe8697ba
+		summarizeBy: sum
+		sourceColumn: statuscode
+
+		annotation SummarizationSetBy = Automatic
+
+	column statuscodename
+		dataType: string
+		lineageTag: 0f302ed7-599a-4594-9243-3d640c997db8
+		summarizeBy: none
+		sourceColumn: statuscodename
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero sequenza importazione'
+		dataType: int64
+		formatString: 0
+		lineageTag: c640fd8d-f6db-4d35-b07c-7753ff120604
+		summarizeBy: sum
+		sourceColumn: importsequencenumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data creazione record'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c317d3e0-e8b5-40f1-953a-4d4f4a34bf12
+		summarizeBy: none
+		sourceColumn: overriddencreatedon
+
+		variation Variation
+			isDefault
+			relationship: f9d323d8-63dc-4f64-8eed-294f6806c43a
+			defaultHierarchy: LocalDateTable_351ea52a-bf45-490e-a13c-b3f3de32779e.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero di versione regola fuso orario'
+		dataType: int64
+		formatString: 0
+		lineageTag: a2b2c92f-914d-4956-b598-383b78ac007b
+		summarizeBy: sum
+		sourceColumn: timezoneruleversionnumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Codice fuso orario conversione UTC'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3b64e76f-91bb-4f1c-8744-a780b2bde84f
+		summarizeBy: sum
+		sourceColumn: utcconversiontimezonecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Budgets ID'
+		dataType: string
+		lineageTag: deda9686-09db-42cb-a905-7bfc087fbfd9
+		summarizeBy: none
+		sourceColumn: lnd_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: e35c7eb6-4803-43c1-8947-f36928fb462a
+		summarizeBy: sum
+		sourceColumn: lnd_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column transactioncurrencyid
+		dataType: string
+		lineageTag: 403db7b6-2cec-48dc-a21f-42e5f233ce69
+		summarizeBy: none
+		sourceColumn: transactioncurrencyid
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valuta
+		dataType: string
+		lineageTag: e9605473-f9f6-4140-988f-00001824aa68
+		summarizeBy: none
+		sourceColumn: transactioncurrencyidname
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tasso di cambio'
+		dataType: double
+		lineageTag: bc442d06-2173-45f5-8c3f-a95073e80311
+		summarizeBy: sum
+		sourceColumn: exchangerate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Amount (base)'
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 15bb1468-a977-41ad-944a-34691a39e0c1
+		summarizeBy: sum
+		sourceColumn: lnd_amount_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column Remarks
+		dataType: string
+		lineageTag: 8bd8ba8c-5618-47c1-a814-d9d3745381f1
+		summarizeBy: none
+		sourceColumn: lnd_remarks
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_offsetprogramid
+		dataType: string
+		lineageTag: 963911cc-e853-427b-beab-ab5aac292375
+		summarizeBy: none
+		sourceColumn: lnd_offsetprogramid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Offset Program ID'
+		dataType: string
+		lineageTag: a3ecd0ec-bfaa-43ad-924c-415544f73539
+		summarizeBy: none
+		sourceColumn: lnd_offsetprogramidname
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: string
+		lineageTag: e699b590-3812-4ab9-b337-b6c54150d3d6
+		summarizeBy: none
+		sourceColumn: lnd_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Budget Total'
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: e4843f9b-733c-492d-8b0c-4621a0e93594
+		summarizeBy: sum
+		sourceColumn: lnd_budgettotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column 'Budget Total (base)'
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: ca06723b-9c73-4fe9-a6a1-490d6cf4412a
+		summarizeBy: sum
+		sourceColumn: lnd_budgettotal_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	partition lnd_budgets = m
+		mode: import
+		source =
+				let
+				    Origine = CommonDataService.Database("lndoffsetctcmgmt.crm4.dynamics.com"),
+				    dbo_lnd_budgets = Origine{[Schema="dbo",Item="lnd_budgets"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(dbo_lnd_budgets,{"asyncoperation", "businessunit", "processsession", "systemuser(createdby)", "systemuser(createdonbehalfby)", "systemuser(modifiedby)", "systemuser(modifiedonbehalfby)", "systemuser(owninguser)", "team", "transactioncurrency"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigazione
+
+	annotation PBI_ResultType = Table
+

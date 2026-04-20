@@ -1,0 +1,1237 @@
+table 'lnd_offsetprogram (3)'
+	lineageTag: 8394a354-849b-4d7f-8fc3-92763cd06bf2
+
+	column lnd_account
+		dataType: string
+		lineageTag: 6e3e30e4-e7d8-493d-9e58-4e769e7538e1
+		summarizeBy: none
+		sourceColumn: lnd_account
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_actualcost
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 1e96de81-23f1-469f-b386-fa0ff05bd29b
+		summarizeBy: sum
+		sourceColumn: lnd_actualcost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_actualcost_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 7c2ba6e9-82f4-4027-bc60-8ec6fd3af873
+		summarizeBy: sum
+		sourceColumn: lnd_actualcost_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_actualpercentcost
+		dataType: double
+		lineageTag: dc3004e4-b221-47b3-bf59-19eba6e5bdb8
+		summarizeBy: sum
+		sourceColumn: lnd_actualpercentcost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column lnd_amendedenddate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 49ff1649-16b1-4a03-a2f1-1d1fe4a8be81
+		summarizeBy: none
+		sourceColumn: lnd_amendedenddate
+
+		variation Variazione
+			isDefault
+			relationship: 454073e8-6fcf-485e-ac87-64cbc873ec80
+			defaultHierarchy: LocalDateTable_f355ebdb-01c6-4743-8a13-2df3f035d90b.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_amendmentsamount
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: dc965c69-c0af-4887-acec-8260daaab31c
+		summarizeBy: sum
+		sourceColumn: lnd_amendmentsamount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_amendmentsamount_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: bcc81844-a813-4921-a6f2-2715e7e3c4eb
+		summarizeBy: sum
+		sourceColumn: lnd_amendmentsamount_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_assignmentdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4c6c8ad5-ac3a-40b1-a9d0-3b08fc616c56
+		summarizeBy: none
+		sourceColumn: lnd_assignmentdate
+
+		variation Variazione
+			isDefault
+			relationship: 969b9f72-7021-4264-b869-e026c8afcde7
+			defaultHierarchy: LocalDateTable_710b9539-af1e-416b-a31e-6662b577d3c6.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonbehalfbyyominame
+		dataType: string
+		lineageTag: d283dea0-5ad2-4116-be88-e215a5b8f7a0
+		summarizeBy: none
+		sourceColumn: createdonbehalfbyyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_averagecommitmenttime
+		dataType: int64
+		formatString: 0
+		lineageTag: ea4714ab-6f3e-4d1b-89b6-e8f2c55749f7
+		summarizeBy: sum
+		sourceColumn: lnd_averagecommitmenttime
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_averagefulfilmenttime
+		dataType: int64
+		formatString: 0
+		lineageTag: 777571f4-b7a3-4185-a19f-3f29db5de672
+		summarizeBy: sum
+		sourceColumn: lnd_averagefulfilmenttime
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_bankguarantees
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 85710a96-ce21-458a-a6c9-89eed43fe070
+		summarizeBy: sum
+		sourceColumn: lnd_bankguarantees
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_bankguarantees_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 4893af93-83e0-4b0c-a5ff-73977e69185e
+		summarizeBy: sum
+		sourceColumn: lnd_bankguarantees_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_bidmanagerannotation
+		dataType: string
+		lineageTag: c0a468df-9d32-4e21-bef4-bf31d6d2ce9a
+		summarizeBy: none
+		sourceColumn: lnd_bidmanagerannotation
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_bidmanagernotificationdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: cb759a8e-2a06-4aa5-8f1f-61b1b4facfd0
+		summarizeBy: none
+		sourceColumn: lnd_bidmanagernotificationdate
+
+		variation Variazione
+			isDefault
+			relationship: e414adc8-7836-46e2-a99e-0cd3aabc4afb
+			defaultHierarchy: LocalDateTable_b5f47b77-3c11-4c0e-85e4-ee32ac97d131.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_budgetcostdifference
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: ae3e1df3-0281-470d-8627-572f07baea66
+		summarizeBy: sum
+		sourceColumn: lnd_budgetcostdifference
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_budgetcostdifference_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 9b5bcda6-7fff-42fa-96e2-8e3fff18faa8
+		summarizeBy: sum
+		sourceColumn: lnd_budgetcostdifference_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_collaborationneededcode
+		dataType: int64
+		formatString: 0
+		lineageTag: dd0d6a4f-df2a-4cd1-b25b-792a2d807a5b
+		summarizeBy: sum
+		sourceColumn: lnd_collaborationneededcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_commitmentrate
+		dataType: double
+		lineageTag: 6d70dd4b-e0f5-49b4-88b6-83289c60efb2
+		summarizeBy: sum
+		sourceColumn: lnd_commitmentrate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column lnd_committedamount
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 3d0de031-ff80-4a8b-be77-8cad57d73f98
+		summarizeBy: sum
+		sourceColumn: lnd_committedamount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_committedamount_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 86174d24-abf2-45c8-83e1-1ee4b5b92706
+		summarizeBy: sum
+		sourceColumn: lnd_committedamount_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_completion
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8d5c672e-c387-4cda-9a7e-987746ba5773
+		summarizeBy: none
+		sourceColumn: lnd_completion
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_contingencyevaluation_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: bcf76fb8-1732-42d5-8960-58eb476a8fdf
+		summarizeBy: sum
+		sourceColumn: lnd_contingencyevaluation_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_contractname
+		dataType: string
+		lineageTag: 76c39809-658f-47d4-9b79-73fc5beff251
+		summarizeBy: none
+		sourceColumn: lnd_contractname
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_contractingparty
+		dataType: string
+		lineageTag: af1014bf-710a-4653-b31b-b88fedde3818
+		summarizeBy: none
+		sourceColumn: lnd_contractingparty
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_corid
+		dataType: string
+		lineageTag: c64f1eea-2622-4035-9dbd-4e0e3e47a2f3
+		summarizeBy: none
+		sourceColumn: lnd_corid
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_cortitle
+		dataType: string
+		lineageTag: ca48ec9a-7921-47bb-a7ec-8aac734c991a
+		summarizeBy: none
+		sourceColumn: lnd_cortitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_country
+		dataType: string
+		lineageTag: feda6078-d64d-4fcc-bb20-a2b95bb78cd7
+		summarizeBy: none
+		sourceColumn: lnd_country
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdby
+		dataType: string
+		lineageTag: 16194f19-6375-4fee-b95c-6d26b5852490
+		summarizeBy: none
+		sourceColumn: createdby
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonbehalfby
+		dataType: string
+		lineageTag: 1d8df28b-45ae-4f81-8f45-a3ce9e13d2a8
+		summarizeBy: none
+		sourceColumn: createdonbehalfby
+
+		annotation SummarizationSetBy = Automatic
+
+	column transactioncurrencyid
+		dataType: string
+		lineageTag: 533fb618-0b7f-493e-ad2d-8bce609aa755
+		summarizeBy: none
+		sourceColumn: transactioncurrencyid
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: cb1a6b8a-73d3-4105-a34e-b4c54ccad7a3
+		summarizeBy: none
+		sourceColumn: createdon
+
+		variation Variazione
+			isDefault
+			relationship: 2378c220-5ece-431b-a16c-d5a70a782174
+			defaultHierarchy: LocalDateTable_0cfb70a6-603b-42ed-a4ec-305ba4139957.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c30720bf-519e-45fa-8774-55e93e4d63af
+		summarizeBy: none
+		sourceColumn: modifiedon
+
+		variation Variazione
+			isDefault
+			relationship: a3d9c4c3-2c8f-4a83-8774-72cef69c409a
+			defaultHierarchy: LocalDateTable_251a6b69-631e-42b4-838e-0735edd27d1e.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_enddate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 644db1ca-d783-4bd8-bf42-7c13f92124e0
+		summarizeBy: none
+		sourceColumn: lnd_enddate
+
+		variation Variazione
+			isDefault
+			relationship: 16c5c606-8fc9-445d-aa81-b481a4305818
+			defaultHierarchy: LocalDateTable_0caa58ad-13a1-4004-9c80-94e9f97a4313.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_escalationamount
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: e5b71716-09f9-4934-92e1-a2466524b0be
+		summarizeBy: sum
+		sourceColumn: lnd_escalationamount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_escalationamount_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 7553ef08-e325-49b3-b9af-39732ef524b1
+		summarizeBy: sum
+		sourceColumn: lnd_escalationamount_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_exchangerate
+		dataType: double
+		lineageTag: c95a7c07-39ca-4afd-ad23-1684ef9168d3
+		summarizeBy: sum
+		sourceColumn: lnd_exchangerate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column lnd_expectedcommercialcost
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: af69a7bd-9e19-4eb1-816a-59b37894ebd4
+		summarizeBy: sum
+		sourceColumn: lnd_expectedcommercialcost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_expectedcommercialcost_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 3bcaecd3-9af5-4fe1-af2e-2357474d9cd8
+		summarizeBy: sum
+		sourceColumn: lnd_expectedcommercialcost_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_expectedfinancialcost
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 9fb01bb6-ab18-4bb1-997a-a649ad77652b
+		summarizeBy: sum
+		sourceColumn: lnd_expectedfinancialcost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_expectedfinancialcost_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: ed79e77c-2b02-4f21-b37e-19cff63ec57c
+		summarizeBy: sum
+		sourceColumn: lnd_expectedfinancialcost_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_expectedoffsetlifecyclecost
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: f9705d49-285c-4681-8609-4b03ffed6139
+		summarizeBy: sum
+		sourceColumn: lnd_expectedoffsetlifecyclecost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_expectedoffsetlifecyclecost_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: a9020e70-303c-4f83-b6c0-3d2e9106c55e
+		summarizeBy: sum
+		sourceColumn: lnd_expectedoffsetlifecyclecost_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_expenditure
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 599c5d36-f2ec-47a1-ba66-3900ee961868
+		summarizeBy: sum
+		sourceColumn: lnd_expenditure
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_expenditure_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 32acddf5-bf63-467a-b81e-d5189fd16068
+		summarizeBy: sum
+		sourceColumn: lnd_expenditure_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_fulfilmentrate
+		dataType: double
+		lineageTag: 0d7c32f1-0aa2-490a-8ca4-96b16e9c17b4
+		summarizeBy: sum
+		sourceColumn: lnd_fulfilmentrate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column lnd_id
+		dataType: string
+		lineageTag: b8484e1d-48b1-4ed2-9a18-dfb3343c1d76
+		summarizeBy: none
+		sourceColumn: lnd_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column processid
+		dataType: string
+		lineageTag: b09d4f6b-5946-4026-be57-350103719569
+		summarizeBy: none
+		sourceColumn: processid
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_lifecyclebudget
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 30a2abe2-193c-4e97-bfe2-5483ab3c1ebd
+		summarizeBy: sum
+		sourceColumn: lnd_lifecyclebudget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_lifecyclebudget_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: ba0a159a-2847-4c4f-8c29-ff84fe972e00
+		summarizeBy: sum
+		sourceColumn: lnd_lifecyclebudget_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_lifecyclepercentbudget
+		dataType: double
+		lineageTag: e1ee934d-d11e-4729-85ea-c1911011548f
+		summarizeBy: sum
+		sourceColumn: lnd_lifecyclepercentbudget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column lnd_liquidatedamount
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: fde35469-737c-4fc6-8f2e-a14955a11384
+		summarizeBy: sum
+		sourceColumn: lnd_liquidatedamount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_liquidatedamount_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: ee41fd0f-a83c-4cb9-bf40-0c06a6e66e70
+		summarizeBy: sum
+		sourceColumn: lnd_liquidatedamount_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_accountyominame
+		dataType: string
+		lineageTag: 918f287d-d034-493d-8094-7fc7c6ee4f5b
+		summarizeBy: none
+		sourceColumn: lnd_accountyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_contractingpartyyominame
+		dataType: string
+		lineageTag: c53591a5-dd40-49ac-a10e-c1b05822a669
+		summarizeBy: none
+		sourceColumn: lnd_contractingpartyyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_lobname
+		dataType: int64
+		formatString: 0
+		lineageTag: a7480e88-88eb-4622-b556-2a27f42509c1
+		summarizeBy: sum
+		sourceColumn: lnd_lobname
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_obligor
+		dataType: string
+		lineageTag: b47fdf32-9804-47e6-8f2e-e19b24afc07e
+		summarizeBy: none
+		sourceColumn: lnd_obligor
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_obligoryominame
+		dataType: string
+		lineageTag: 90675ca0-f7a2-47ad-848d-af2ea00981bf
+		summarizeBy: none
+		sourceColumn: lnd_obligoryominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_performancebondtermination
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b86ec3f-b5c2-47b8-84bf-9fd356d7880d
+		summarizeBy: sum
+		sourceColumn: lnd_performancebondtermination
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_productid
+		dataType: string
+		lineageTag: 5f49ce4d-6fae-41c7-8fb2-7d2b25661e34
+		summarizeBy: none
+		sourceColumn: lnd_productid
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_proposalid
+		dataType: string
+		lineageTag: 2a19087d-f988-458b-a6ea-5a10f6b9137f
+		summarizeBy: none
+		sourceColumn: lnd_proposalid
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_releasedletterobtained
+		dataType: int64
+		formatString: 0
+		lineageTag: ce6ec696-cc9a-473d-99cd-79ed07bc3d8e
+		summarizeBy: sum
+		sourceColumn: lnd_releasedletterobtained
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_transactioncurrencyid
+		dataType: string
+		lineageTag: 00f8459f-513e-4337-9c3a-3d746b57110c
+		summarizeBy: none
+		sourceColumn: lnd_transactioncurrencyid
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_typeofrequestcode
+		dataType: int64
+		formatString: 0
+		lineageTag: 749afff6-8cd5-4dd7-ad34-165fa1d53cd2
+		summarizeBy: sum
+		sourceColumn: lnd_typeofrequestcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_offsetcontractvalue
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 1f7d4a40-8181-4b4b-8621-7cd3172d60d3
+		summarizeBy: sum
+		sourceColumn: lnd_offsetcontractvalue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_offsetcontractvalue_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: c573dc0d-cf14-448c-9f52-8f41d233988d
+		summarizeBy: sum
+		sourceColumn: lnd_offsetcontractvalue_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_offsetpercentage
+		dataType: double
+		lineageTag: 85b3d907-e848-4da7-9edc-79bbb66c5aef
+		summarizeBy: sum
+		sourceColumn: lnd_offsetpercentage
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column lnd_offsetprovision
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 018fb59a-890d-4a67-ba68-d0a0b54b9d1f
+		summarizeBy: sum
+		sourceColumn: lnd_offsetprovision
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_offsetprovision_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: fbcf9211-0052-49af-803d-d0d38a1023b3
+		summarizeBy: sum
+		sourceColumn: lnd_offsetprovision_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_outstandingamount
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 3c69cde0-e1ba-48ff-a8e3-56729efeab53
+		summarizeBy: sum
+		sourceColumn: lnd_outstandingamount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_outstandingamount_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 3535e780-1bfd-4cae-bcb5-9877a2751154
+		summarizeBy: sum
+		sourceColumn: lnd_outstandingamount_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_overallcost
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 0fce54f4-456a-4fbe-a047-23d0162867ac
+		summarizeBy: sum
+		sourceColumn: lnd_overallcost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_overallcost_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 7f06078f-337f-452d-b140-515b683773c9
+		summarizeBy: sum
+		sourceColumn: lnd_overallcost_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_overallpercentcost
+		dataType: double
+		lineageTag: 58289646-48ca-41dd-b72d-4c2584a7cbdc
+		summarizeBy: sum
+		sourceColumn: lnd_overallpercentcost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column lnd_overcommitment
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: b77fffbf-f88b-42e3-8a21-180916457145
+		summarizeBy: sum
+		sourceColumn: lnd_overcommitment
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_overcommitment_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 3d1e5daf-2baf-428e-bac2-e8553e9fe037
+		summarizeBy: sum
+		sourceColumn: lnd_overcommitment_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column ownerid
+		dataType: string
+		lineageTag: dded8ed3-9dac-4944-809b-65f273193d09
+		summarizeBy: none
+		sourceColumn: ownerid
+
+		annotation SummarizationSetBy = Automatic
+
+	column owneridyominame
+		dataType: string
+		lineageTag: 9df1bf74-fe38-4d34-811c-520f804bc417
+		summarizeBy: none
+		sourceColumn: owneridyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningbusinessunit
+		dataType: string
+		lineageTag: 5d1c54df-ee1d-4a1a-b1cc-e182a2c110c4
+		summarizeBy: none
+		sourceColumn: owningbusinessunit
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningteam
+		dataType: string
+		lineageTag: a3110a18-a094-417f-a979-d67ff5c8f3ec
+		summarizeBy: none
+		sourceColumn: owningteam
+
+		annotation SummarizationSetBy = Automatic
+
+	column owninguser
+		dataType: string
+		lineageTag: 7d97a028-2135-4b2f-bf10-ac165665c645
+		summarizeBy: none
+		sourceColumn: owninguser
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_paidpenalties
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: ede3bdeb-28be-4805-a92d-723386216f4d
+		summarizeBy: sum
+		sourceColumn: lnd_paidpenalties
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_paidpenalties_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: ed66990a-6c6d-44aa-be2e-f37d2d7b509e
+		summarizeBy: sum
+		sourceColumn: lnd_paidpenalties_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_penaltypercentage
+		dataType: double
+		lineageTag: 05b9bbff-e9db-4df6-b772-adb328ed439d
+		summarizeBy: sum
+		sourceColumn: lnd_penaltypercentage
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column lnd_performedamount
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 7a727091-5ae2-4bb9-b36c-8ada61ce154d
+		summarizeBy: sum
+		sourceColumn: lnd_performedamount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_performedamount_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: feba016b-2529-4f10-905e-d6c9ad1733d3
+		summarizeBy: sum
+		sourceColumn: lnd_performedamount_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_possiblepenalty
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 0272ed30-e215-45ba-94a3-c4c4ce852164
+		summarizeBy: sum
+		sourceColumn: lnd_possiblepenalty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_possiblepenalty_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 1d347d6e-624a-45d9-99b1-adc1df533190
+		summarizeBy: sum
+		sourceColumn: lnd_possiblepenalty_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_primecontractvalue
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 097628b6-c02d-4cc7-977d-a0e07cbf169c
+		summarizeBy: sum
+		sourceColumn: lnd_primecontractvalue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_primecontractvalue_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 926da962-4d1e-4415-bdbe-3cc6ad620a02
+		summarizeBy: sum
+		sourceColumn: lnd_primecontractvalue_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_programname
+		dataType: string
+		lineageTag: a596e000-4343-47fb-92a6-79309afe5ee6
+		summarizeBy: none
+		sourceColumn: lnd_programname
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_progressivename
+		dataType: string
+		lineageTag: 4791bd4f-a7c9-452f-a509-4f5834807976
+		summarizeBy: none
+		sourceColumn: lnd_progressivename
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_projectsvalue
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: f22ddd8e-d71c-4755-b8d5-bb873ace5c57
+		summarizeBy: sum
+		sourceColumn: lnd_projectsvalue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_projectsvalue_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 5650ba79-bd42-458e-bb7f-ab43d6c72f4b
+		summarizeBy: sum
+		sourceColumn: lnd_projectsvalue_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_proposalexpirationdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 485e3c8f-4090-4d3b-bd00-f95b44c513c7
+		summarizeBy: none
+		sourceColumn: lnd_proposalexpirationdate
+
+		variation Variazione
+			isDefault
+			relationship: 8a458b68-9819-4646-8567-65b32611bed5
+			defaultHierarchy: LocalDateTable_cee0fc80-b60d-4d55-a36c-6c4eac143f62.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_contingencyevaluation
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: f764a194-5a35-4cba-9d4e-52bc899359b2
+		summarizeBy: sum
+		sourceColumn: lnd_contingencyevaluation
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_signaturedate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3040af3a-574a-4bd5-b909-88beae7619a5
+		summarizeBy: none
+		sourceColumn: lnd_signaturedate
+
+		variation Variazione
+			isDefault
+			relationship: 5839d0ce-0e41-451e-bcaf-824c88c561cf
+			defaultHierarchy: LocalDateTable_00cbcd28-61e0-434a-84ec-03dd04a1e3fd.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_startdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1d9a0fe5-598d-4dac-bd51-309726602c84
+		summarizeBy: none
+		sourceColumn: lnd_startdate
+
+		variation Variazione
+			isDefault
+			relationship: 63844ac7-ee0d-4c41-a043-52d457585c21
+			defaultHierarchy: LocalDateTable_fab3067c-da0a-4d79-8026-f72b34612282.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+	column statecodename
+		dataType: string
+		lineageTag: 2a8c2c9c-a823-4251-bfbf-e8675021e58a
+		summarizeBy: none
+		sourceColumn: statecodename
+
+		annotation SummarizationSetBy = Automatic
+
+	column statuscodename
+		dataType: string
+		lineageTag: 77600d74-b354-472b-ae14-4c29ed17a81c
+		summarizeBy: none
+		sourceColumn: statuscodename
+
+		annotation SummarizationSetBy = Automatic
+
+	column statuscode
+		dataType: int64
+		formatString: 0
+		lineageTag: 6191d1f9-4d82-45a7-bff3-23bab96f89e5
+		summarizeBy: sum
+		sourceColumn: statuscode
+
+		annotation SummarizationSetBy = Automatic
+
+	column lnd_uncommitted
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 1e5a4b99-b489-4aca-ac34-b619dc3fdedc
+		summarizeBy: sum
+		sourceColumn: lnd_uncommitted
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	column lnd_uncommitted_base
+		dataType: decimal
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: eac32798-3c63-4316-a68b-c43748b549cc
+		summarizeBy: sum
+		sourceColumn: lnd_uncommitted_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"it-IT"}
+
+	partition 'lnd_offsetprogram (3)' = m
+		mode: import
+		source =
+				let
+				    Origine = CommonDataService.Database(
+				        "lndquality.crm4.dynamics.com",
+				        [CreateNavigationProperties=false]
+				    ),
+				
+				    Tabella = Origine{[Schema="dbo",Item="lnd_offsetprogram"]}[Data],
+				
+				    Colonne = {
+				
+				        "lnd_account",
+				        "lnd_actualcost",
+				        "lnd_actualcost_base",
+				        "lnd_actualpercentcost",
+				        "lnd_amendedenddate",
+				        "lnd_amendmentsamount",
+				        "lnd_amendmentsamount_base",
+				        "lnd_assignmentdate",
+				
+				        "createdonbehalfbyyominame",
+				
+				        "lnd_averagecommitmenttime",
+				        "lnd_averagefulfilmenttime",
+				        "lnd_bankguarantees",
+				        "lnd_bankguarantees_base",
+				
+				        "lnd_bidmanagerannotation",
+				        "lnd_bidmanagernotificationdate",
+				
+				        "lnd_budgetcostdifference",
+				        "lnd_budgetcostdifference_base",
+				
+				        "lnd_collaborationneededcode",
+				        "lnd_commitmentrate",
+				        "lnd_committedamount",
+				        "lnd_committedamount_base",
+				
+				        "lnd_completion",
+				        "lnd_contingencyevaluation_base",
+				
+				        "lnd_contractname",
+				        "lnd_contractingparty",
+				        "lnd_corid",
+				        "lnd_cortitle",
+				
+				        "lnd_country",
+				
+				        "createdby",
+				        "createdonbehalfby",
+				
+				        "transactioncurrencyid",
+				
+				        "createdon",
+				        "modifiedon",
+				
+				        "lnd_enddate",
+				
+				        "lnd_escalationamount",
+				        "lnd_escalationamount_base",
+				
+				        "lnd_exchangerate",
+				
+				        "lnd_expectedcommercialcost",
+				        "lnd_expectedcommercialcost_base",
+				
+				        "lnd_expectedfinancialcost",
+				        "lnd_expectedfinancialcost_base",
+				
+				        "lnd_expectedoffsetlifecyclecost",
+				        "lnd_expectedoffsetlifecyclecost_base",
+				
+				        "lnd_expenditure",
+				        "lnd_expenditure_base",
+				
+				        "lnd_fulfilmentrate",
+				
+				        "lnd_id",
+				        "processid",
+				
+				        "lnd_lifecyclebudget",
+				        "lnd_lifecyclebudget_base",
+				        "lnd_lifecyclepercentbudget",
+				
+				        "lnd_liquidatedamount",
+				        "lnd_liquidatedamount_base",
+				
+				        "lnd_accountyominame",
+				
+				        "lnd_contractingpartyyominame",
+				
+				        "lnd_lobname",
+				
+				        "lnd_obligor",
+				        "lnd_obligoryominame",
+				
+				        "lnd_performancebondtermination",
+				
+				        "lnd_productid",
+				        "lnd_proposalid",
+				
+				        "lnd_releasedletterobtained",
+				
+				        "lnd_transactioncurrencyid",
+				
+				        "lnd_typeofrequestcode",
+				
+				        "lnd_offsetcontractvalue",
+				        "lnd_offsetcontractvalue_base",
+				
+				        "lnd_offsetpercentage",
+				
+				        "lnd_offsetprovision",
+				        "lnd_offsetprovision_base",
+				
+				        "lnd_outstandingamount",
+				        "lnd_outstandingamount_base",
+				
+				        "lnd_overallcost",
+				        "lnd_overallcost_base",
+				
+				        "lnd_overallpercentcost",
+				
+				        "lnd_overcommitment",
+				        "lnd_overcommitment_base",
+				
+				        "ownerid",
+				        "owneridyominame",
+				
+				        "owningbusinessunit",
+				        "owningteam",
+				        "owninguser",
+				
+				        "lnd_paidpenalties",
+				        "lnd_paidpenalties_base",
+				
+				        "lnd_penaltypercentage",
+				
+				        "lnd_performedamount",
+				        "lnd_performedamount_base",
+				
+				        "lnd_possiblepenalty",
+				        "lnd_possiblepenalty_base",
+				
+				        "lnd_primecontractvalue",
+				        "lnd_primecontractvalue_base",
+				
+				        "product",
+				
+				        "lnd_programname",
+				        "lnd_progressivename",
+				
+				        "lnd_projectsvalue",
+				        "lnd_projectsvalue_base",
+				
+				        "lnd_proposalexpirationdate",
+				
+				        "lnd_contingencyevaluation",
+				
+				        "lnd_signaturedate",
+				
+				        "lnd_startdate",
+				
+				        "statecodename",
+				        "statuscodename",
+				        "statuscode",
+				
+				        "lnd_uncommitted",
+				        "lnd_uncommitted_base"
+				    },
+				
+				    ColonneSelezionate =
+				        Table.SelectColumns(
+				            Tabella,
+				            List.Distinct(Colonne),
+				            MissingField.Ignore
+				        )
+				
+				in
+				    ColonneSelezionate
+
+	annotation PBI_NavigationStepName = Navigazione
+
+	annotation PBI_ResultType = Table
+
